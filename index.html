@@ -27,8 +27,23 @@
         </main>
         <aside>
             <section class="contenedor-panel-imagen">
-                <div>
-    
+                <h2 class="panel-imagen-titulo">IMAGEN</h2>
+                <div class="panel-imagen-contenedor-url">
+                    <h3>URL</h3>
+                    <input type="text" class="panel-imagen-input-url" id="input-url">
+                </div>
+                <div class="panel-imagen-contenedor-fondo">
+                    <h3>FONDO</h3>
+                    <div class="panel-imagen-contenedor-fondo-inputs">
+                        <div class="fondo-contenedor-color"><input type="color"><span>COLOR</span></div>
+                        <select name="modo-mezcla" id="input-modo-mezcla">
+                            <option value="Ninguno">Ninguno</option>
+                            <option value="Aclarar">Aclarar</option>
+                            <option value="Oscurecer">Oscurecer</option>
+                            <option value="Diferencia">Diferencia</option>
+                            <option value="Luminosidad">Luminosidad</option>
+                            <option value="Multiplicar">Multiplicar</option>
+                    </div>  
                 </div>
             </section>
             <section class="contenedor-panel-texto">
