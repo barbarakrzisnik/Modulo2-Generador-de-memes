@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/096a878366.js" crossorigin="anonymous"></script>
     <title>Generador de memes</title>
 </head>
+
 <body>
-        <header class="header">
+    <!-- <header class="header">
             <h1>Generador de memes</h1>
             <div class="contenedor-botones-header">
                 <button class="boton-nav" id="nav-boton-imagen"><i class="far fa-file-image"></i> Imagen</button>
@@ -22,23 +24,21 @@
         </header>   
         <main>
             <div class="contenedor-meme">
-                <div class="contenedor-texto-superior"><p class="texto-superior"></p></div>
+                <p class="texto-superior" id="texto-superior">Top text</p>
                 <div class="contenedor-imagen"></div>
-                <div  class="contenedor-texto-inferior"><p class="texto-inferior"></p></div>
+                <p class="texto-inferior" id="texto-inferior">Bottom text</p>
             </div>
             <div><button class="boton-descargar-imagen" id="boton-descargar-imagen"><i class="fas fa-download"></i> Descargar imagen</button></div>
-        </main>
-        <!-- <aside>
-            <section class="contenedor-panel-imagen">
-                <h2 class="panel-imagen-titulo">IMAGEN</h2>
-                <div class="panel-imagen-contenedor-url">
-                    <h3>URL</h3>
-                    <input type="text" class="panel-imagen-input-url" id="input-url">
-                </div>
-                <div class="panel-imagen-contenedor-fondo">
-                    <h3>FONDO</h3>
-                    <div class="panel-imagen-contenedor-fondo-inputs">
-                        <div class="fondo-contenedor-color"><input type="color"><span>COLOR</span>></div>
+        </main> -->
+    <aside>
+        <section class="contenedor-panel-imagen">
+            <h2 class="panel-imagen-titulo">IMAGEN</h2>
+            <div class="panel-imagen-contenedor-url">
+                <h3>URL</h3>
+                <input type="text" class="panel-imagen-input-url" id="input-url">
+            </div class="panel-imagen-contenedor-fondo">
+                <h3>FONDO</h3>
+                    <div><input type="color"><span>COLOR</span>
                         <select name="modo-mezcla" id="input-modo-mezcla">
                             <option value="Ninguno">Ninguno</option>
                             <option value="Aclarar">Aclarar</option>
@@ -46,40 +46,41 @@
                             <option value="Diferencia">Diferencia</option>
                             <option value="Luminosidad">Luminosidad</option>
                             <option value="Multiplicar">Multiplicar</option>
-                    </div>  
-                </div>
-                <div class="panel-imagen-contenedor-filtros">
-                    <h3>FILTROS</h3>
-                    <label for="input-filtro-brillo">BRILLOS</label>
-                    <input id="input-filtro-brillo" type="range" min="0" max="100">
+                        </select>
+                    </div>
 
-                    <label for="input-filtro-opacidad">OPACIDAD</label>
-                    <input id="input-filtro-opacidad" type="range" min="0" max="100">
+            <div class="panel-imagen-contenedor-filtros">
+                <h3>FILTROS</h3>
+                <label for="input-filtro-brillo">BRILLOS</label>
+                <input id="input-filtro-brillo" type="range" min="0" max="100">
 
-                    <label for="input-filtro-contraste">CONTRASTE</label>
-                    <input id="input-filtro-contraste" type="range" min="0" max="100">
+                <label for="input-filtro-opacidad">OPACIDAD</label>
+                <input id="input-filtro-opacidad" type="range" min="0" max="100">
 
-                    <label for="input-filtro-desenfoque">DESENFOQUE</label>
-                    <input id="input-filtro-desenfoque" type="range" min="0" max="100">
+                <label for="input-filtro-contraste">CONTRASTE</label>
+                <input id="input-filtro-contraste" type="range" min="0" max="100">
 
-                    <label for="input-filtro-escala-de-grises">ESCALA DE GRISES</label>
-                    <input id="input-filtro-escala-de-grises" type="range" min="0" max="100">
+                <label for="input-filtro-desenfoque">DESENFOQUE</label>
+                <input id="input-filtro-desenfoque" type="range" min="0" max="100">
 
-                    <label for="input-filtro-sepia">SEPIA</label>
-                    <input id="input-filtro-sepia" type="range" min="0" max="100">
+                <label for="input-filtro-escala-de-grises">ESCALA DE GRISES</label>
+                <input id="input-filtro-escala-de-grises" type="range" min="0" max="100">
 
-                    <label for="input-filtro-hue">HUE</label>
-                    <input id="input-filtro-hue" type="range" min="0" max="100">
+                <label for="input-filtro-sepia">SEPIA</label>
+                <input id="input-filtro-sepia" type="range" min="0" max="100">
 
-                    <label for="input-filtro-saturado">SATURADO</label>
-                    <input id="input-filtro-saturado" type="range" min="0" max="100">
+                <label for="input-filtro-hue">HUE</label>
+                <input id="input-filtro-hue" type="range" min="0" max="100">
 
-                    <label for="input-filtro-negativo">NEGATIVO</label>
-                    <input id="input-filtro-negativo" type="range" min="0" max="100">
-                </div>
-                <button>Restablecer filtros</button>
-            </section>
-            <section class="contenedor-panel-texto">
+                <label for="input-filtro-saturado">SATURADO</label>
+                <input id="input-filtro-saturado" type="range" min="0" max="100">
+
+                <label for="input-filtro-negativo">NEGATIVO</label>
+                <input id="input-filtro-negativo" type="range" min="0" max="100">
+            </div>
+            <button>Restablecer filtros</button>
+        </section>
+        <!-- <section class="contenedor-panel-texto">
 
                 <h2 class="panel-texto-titulo">TEXTO</h2>
 
@@ -153,9 +154,10 @@
                         <option value="2.5">2.5</option>
                 </div>
 
-            </section>
-        </aside> -->
-    
+            </section> -->
+    </aside>
+
     <script src="index.js"></script>
 </body>
+
 </html>
