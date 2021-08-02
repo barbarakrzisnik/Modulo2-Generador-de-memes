@@ -2,10 +2,16 @@ body {
     background-color: #30353f;
     font-family: 'Open Sans', sans-serif;
     color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-nav, header {
+.header {
     background-color: #191f2b;
-    
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
