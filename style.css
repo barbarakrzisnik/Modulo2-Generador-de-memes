@@ -9,12 +9,20 @@ body {
 
 .header {
     background-color: #191f2b;
-    height: 150px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.contenedor-botones-header {
+.boton-nav {
     background-color: #191f2b;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.boton-nav:hover {
+    background-color: #303b52;
 }
