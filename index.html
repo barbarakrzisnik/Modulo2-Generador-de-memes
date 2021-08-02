@@ -5,27 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <title>Generador de memes</title>
 </head>
 <body>
         <header>
             <h1>Generador de memes</h1>
-        </header>
-        <nav>
             <div class="nav-contenedor-botones">
                 <button class="boton-nav" id="nav-boton-imagen">Imagen</button>
                 <button class="boton-nav" id="boton-texto">Texto</button>
                 <button class="boton-nav" id="boton-modo-oscuro">Modo Oscuro</button>
             </div>
-        </nav>
+        </header>   
         <main>
-            <div class="canvas">
+            <div class="contenedor-meme">
                 <div><p class="texto-superior"></p></div>
                 <div class="contenedor-imagen"></div>
                 <div><p class="texto-inferior"></p></div>
             </div>
+            <button id="boton-descargar-imagen">Descargar imagen</button>
         </main>
-        <aside>
+        <!-- <aside>
             <section class="contenedor-panel-imagen">
                 <h2 class="panel-imagen-titulo">IMAGEN</h2>
                 <div class="panel-imagen-contenedor-url">
@@ -148,10 +150,10 @@
                         <option value="1.5">1.5</option>
                         <option value="2">2</option>
                         <option value="2.5">2.5</option>
-
                 </div>
+
             </section>
-        </aside>
+        </aside> -->
     
     <script src="index.js"></script>
 </body>
