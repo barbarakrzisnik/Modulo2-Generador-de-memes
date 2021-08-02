@@ -73,10 +73,11 @@ main {
 /* Estilos filtro imagen */
 
 .contenedor-panel-imagen {
-    height: 100%;
-    width: 300px;
-    padding: 10px;
-    background-color: blueviolet;
+    width: 240px;
+    /* height: 80%;
+    overflow: scroll; */
+    padding: 10px 30px;
+    background-color: #222a3a;
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -86,7 +87,88 @@ h2 {
     text-align: center;
 }
 
+h3 {
+    font-size: 16px;
+}
+
+.panel-imagen-input-url {
+    border: none;
+    width: 100%;
+    height: 30px;
+    background-color: #444c59;
+    border-radius: 5px;
+}
+
+.panel-imagen-contenedor-fondo {
+    display: flex;
+}
+
+.panel-imagen-contenedor-fondo-color, .panel-imagen-contenedor-fondo-mezcla  {
+    background-color: #444c59;
+    height: 20px;
+    width: 50%;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.input-color {
+    border-radius: 80px;
+    margin-right: 10px;
+    height: 20px;
+    width: 20px;
+    border: none;
+    outline: none;
+}
+
+.input-color::-webkit-color-swatch-wrapper {
+    padding: 0; 
+}
+
+.input-color::-webkit-color-swatch {
+    border: none;
+    border-radius: 100%;
+}
+
+.input-modo-mezcla {
+    background-color: #444c59;
+    border: none;
+    color: white;
+}
+
+.label-filtros {
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
 .panel-imagen-contenedor-filtros {
     display: flex;
     flex-direction: column;
+}
+
+input[type=range] {
+    background-color: #444c59;
+    width: 100%;
+    color: white;
+    border-radius: 10px;
+    height: 5px;
+}
+
+.boton-restablecer-filtros {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 200px;
+    background-color: #2f394d;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.boton-restablecer-filtros:hover {
+    background-color: #3f4c66;
 }

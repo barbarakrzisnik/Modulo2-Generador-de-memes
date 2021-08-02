@@ -33,52 +33,59 @@
     <aside>
         <section class="contenedor-panel-imagen">
             <h2 class="panel-imagen-titulo">IMAGEN</h2>
+
             <div class="panel-imagen-contenedor-url">
                 <h3>URL</h3>
                 <input type="text" class="panel-imagen-input-url" id="input-url">
-            </div class="panel-imagen-contenedor-fondo">
-                <h3>FONDO</h3>
-                    <div><input type="color"><span>COLOR</span>
-                        <select name="modo-mezcla" id="input-modo-mezcla">
-                            <option value="Ninguno">Ninguno</option>
-                            <option value="Aclarar">Aclarar</option>
-                            <option value="Oscurecer">Oscurecer</option>
-                            <option value="Diferencia">Diferencia</option>
-                            <option value="Luminosidad">Luminosidad</option>
-                            <option value="Multiplicar">Multiplicar</option>
-                        </select>
-                    </div>
-
-            <div class="panel-imagen-contenedor-filtros">
-                <h3>FILTROS</h3>
-                <label for="input-filtro-brillo">BRILLOS</label>
-                <input id="input-filtro-brillo" type="range" min="0" max="100">
-
-                <label for="input-filtro-opacidad">OPACIDAD</label>
-                <input id="input-filtro-opacidad" type="range" min="0" max="100">
-
-                <label for="input-filtro-contraste">CONTRASTE</label>
-                <input id="input-filtro-contraste" type="range" min="0" max="100">
-
-                <label for="input-filtro-desenfoque">DESENFOQUE</label>
-                <input id="input-filtro-desenfoque" type="range" min="0" max="100">
-
-                <label for="input-filtro-escala-de-grises">ESCALA DE GRISES</label>
-                <input id="input-filtro-escala-de-grises" type="range" min="0" max="100">
-
-                <label for="input-filtro-sepia">SEPIA</label>
-                <input id="input-filtro-sepia" type="range" min="0" max="100">
-
-                <label for="input-filtro-hue">HUE</label>
-                <input id="input-filtro-hue" type="range" min="0" max="100">
-
-                <label for="input-filtro-saturado">SATURADO</label>
-                <input id="input-filtro-saturado" type="range" min="0" max="100">
-
-                <label for="input-filtro-negativo">NEGATIVO</label>
-                <input id="input-filtro-negativo" type="range" min="0" max="100">
             </div>
-            <button>Restablecer filtros</button>
+                <h3>FONDO</h3>
+            <div class="panel-imagen-contenedor-fondo">
+                <div class="panel-imagen-contenedor-fondo-color">
+                    <input type="color" class="input-color"><span>COLOR</span>
+                </div>
+                <div class="panel-imagen-contenedor-fondo-mezcla">
+                     <select name="modo-mezcla" id="input-modo-mezcla" class="input-modo-mezcla">
+                        <option value="Ninguno">Ninguno</option>
+                        <option value="Aclarar">Aclarar</option>
+                        <option value="Oscurecer">Oscurecer</option>
+                        <option value="Diferencia">Diferencia</option>
+                        <option value="Luminosidad">Luminosidad</option>
+                        <option value="Multiplicar">Multiplicar</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <div class="panel-imagen-contenedor-filtros">
+                    <h3>FILTROS</h3>
+                    <label class="label-filtros" for="input-filtro-brillo">BRILLOS</label>
+                    <input id="input-filtro-brillo" type="range" min="0" max="100">
+
+                    <label class="label-filtros" for="input-filtro-opacidad">OPACIDAD</label>
+                    <input id="input-filtro-opacidad" type="range" min="0" max="100">
+
+                    <label class="label-filtros" for="input-filtro-contraste">CONTRASTE</label>
+                    <input id="input-filtro-contraste" type="range" min="0" max="100">
+
+                    <label class="label-filtros" for="input-filtro-desenfoque">DESENFOQUE</label>
+                    <input id="input-filtro-desenfoque" type="range" min="0" max="100">
+
+                    <label class="label-filtros" for="input-filtro-escala-de-grises">ESCALA DE GRISES</label>
+                    <input id="input-filtro-escala-de-grises" type="range" min="0" max="100">
+
+                    <label class="label-filtros" for="input-filtro-sepia">SEPIA</label>
+                    <input id="input-filtro-sepia" type="range" min="0" max="100">
+
+                    <label class="label-filtros" for="input-filtro-hue">HUE</label>
+                    <input id="input-filtro-hue" type="range" min="0" max="100">
+
+                    <label class="label-filtros" for="input-filtro-saturado">SATURADO</label>
+                    <input id="input-filtro-saturado" type="range" min="0" max="100">
+
+                    <label class="label-filtros" for="input-filtro-negativo">NEGATIVO</label>
+                    <input id="input-filtro-negativo" type="range" min="0" max="100">
+                </div>
+                <button class="boton-restablecer-filtros">Restablecer filtros</button>
         </section>
         <!-- <section class="contenedor-panel-texto">
 
