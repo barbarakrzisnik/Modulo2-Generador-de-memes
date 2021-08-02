@@ -1,3 +1,4 @@
+/* Estilos header */
 body {
     background-color: #30353f;
     font-family: 'Open Sans', sans-serif;
@@ -27,27 +28,65 @@ body {
     background-color: #303b52;
 }
 
-.contenedor-meme {
-    height: 500px;
-    width: 500px;
-    background-color: white;
-    margin: 20px;
-}
-
-.contenedor-texto-superior, .contenedor-texto-inferior {
-    height: 100px;
-    background-color: hotpink;
-}
+/* Estilos main */
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.contenedor-meme {
+    height: 500px;
+    width: 500px;
+    background-color: black;
+    padding: 0;
+    margin: 20px;
+    align-items: stretch;
+}
+
+.texto-superior, .texto-inferior {
+    background-color: white;
+    color: black;
+    padding: 20px 5px;
+    text-align: center;
+    margin: 0;
+}
+
+.contenedor-imagen {
+    height: 375px;
+}
+
+
 .boton-descargar-imagen {
     background-color: #2b5f3c;
     color: white;
     border: none;
     padding: 10px;
     border-radius: 5px;
+    
+}
+
+.boton-descargar-imagen:hover {
+    background-color: #3a8152;
+}
+
+/* Estilos filtro imagen */
+
+.contenedor-panel-imagen {
+    height: 100%;
+    width: 300px;
+    padding: 10px;
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+h2 {
+    text-align: center;
+}
+
+.panel-imagen-contenedor-filtros {
+    display: flex;
+    flex-direction: column;
 }
