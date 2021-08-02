@@ -26,3 +26,28 @@ body {
 .boton-nav:hover {
     background-color: #303b52;
 }
+
+.contenedor-meme {
+    height: 500px;
+    width: 500px;
+    background-color: white;
+    margin: 20px;
+}
+
+.contenedor-texto-superior, .contenedor-texto-inferior {
+    height: 100px;
+    background-color: hotpink;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.boton-descargar-imagen {
+    background-color: #2b5f3c;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
