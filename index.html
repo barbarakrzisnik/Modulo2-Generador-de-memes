@@ -8,15 +8,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/096a878366.js" crossorigin="anonymous"></script>
     <title>Generador de memes</title>
 </head>
 <body>
-        <header>
+        <header class="header">
             <h1>Generador de memes</h1>
-            <div class="nav-contenedor-botones">
-                <button class="boton-nav" id="nav-boton-imagen">Imagen</button>
-                <button class="boton-nav" id="boton-texto">Texto</button>
-                <button class="boton-nav" id="boton-modo-oscuro">Modo Oscuro</button>
+            <div class="contenedor-botones-header">
+                <button class="boton-nav" id="nav-boton-imagen"><i class="far fa-file-image"></i>Imagen</button>
+                <button class="boton-nav" id="boton-texto"><i class="fas fa-font"></i>Texto</button>
+                <button class="boton-nav" id="boton-modo-oscuro"><i class="far fa-lightbulb"></i>Modo Oscuro</button>
             </div>
         </header>   
         <main>
@@ -25,7 +26,7 @@
                 <div class="contenedor-imagen"></div>
                 <div><p class="texto-inferior"></p></div>
             </div>
-            <button id="boton-descargar-imagen">Descargar imagen</button>
+            <button id="boton-descargar-imagen"><i class="fas fa-download"></i>Descargar imagen</button>
         </main>
         <!-- <aside>
             <section class="contenedor-panel-imagen">
