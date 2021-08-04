@@ -28,6 +28,14 @@ body {
     background-color: #303b52;
 }
 
+/* Input general */
+
+.input-select {
+    background-color: #444c59;
+    border: none;
+    color: white;
+}
+
 /* Estilos main */
 
 main {
@@ -78,7 +86,7 @@ main {
     overflow: scroll; */
     padding: 10px 30px;
     background-color: #222a3a;
-    display: flex;
+    display: none;
     flex-direction: column;
     position: absolute;
 }
@@ -171,4 +179,57 @@ input[type=range] {
 
 .boton-restablecer-filtros:hover {
     background-color: #3f4c66;
+}
+
+/* Estilos panel texto */
+
+.contenedor-panel-texto {
+    width: 240px;
+    padding: 10px 30px;
+    background-color: #222a3a;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+.panel-texto-superior-inferior {
+    display: flex;
+    flex-direction: column;
+}
+.input-texto-inferior, .input-texto-superior {
+    border: none;
+    width: 100%;
+    height: 40px;
+    background-color: #444c59;
+    border-radius: 5px;
+}
+
+.label-input-texto {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.panel-texto-fuente {
+    display: flex;
+    flex-direction: column;
+}
+
+.botones-panel-texto {
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 50px;
+    background-color: #2f394d;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+.boton-panel-texto:hover {
+    background-color: #3f4c66;
+}
+
+.input-select-fuente {
+    padding: 10px;
 }
