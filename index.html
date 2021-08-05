@@ -19,11 +19,11 @@
             <h1>Generador de memes</h1>
             <div class="contenedor-botones-header">
                 <button class="boton-nav" id="nav-boton-imagen"><i class="far fa-file-image"></i> Imagen</button>
-                <button class="boton-nav" id="boton-texto"><i class="fas fa-font"></i> Texto</button>
-                <button class="boton-nav" id="boton-modo-oscuro"><i class="far fa-lightbulb"></i> Modo Oscuro</button>
+                <button class="boton-nav" id="nav-boton-texto"><i class="fas fa-font"></i> Texto</button>
+                <button class="boton-nav" id="nav-boton-modo-oscuro"><i class="far fa-lightbulb"></i> Modo Oscuro</button>
             </div>
         </header>
-        <div class="contenedor-main">
+        <div class="contenedor-canvas">
             <div class="contenedor-meme">
                 <p class="texto-superior" id="texto-superior">Top text</p>
                 <div class="contenedor-imagen"></div>
@@ -35,7 +35,7 @@
     </main>
     <aside>
         <section class="contenedor-panel-imagen">
-            <h2 class="panel-imagen-titulo">IMAGEN</h2>
+            <h2>IMAGEN</h2>
 
             <div class="panel-imagen-contenedor-url">
                 <h3>URL</h3>
@@ -62,50 +62,47 @@
                 <div class="panel-imagen-contenedor-filtros">
                     <h3>FILTROS</h3>
                     <label class="label-filtros" for="input-filtro-brillo">BRILLOS</label>
-                    <input id="input-filtro-brillo" type="range" min="0" max="1" step="0.1" value="1">
+                    <input class="input-range" id="input-filtro-brillo" type="range" min="0" max="1" step="0.1" value="1">
 
                     <label class="label-filtros" for="input-filtro-opacidad">OPACIDAD</label>
-                    <input id="input-filtro-opacidad" type="range" min="0" max="1" step="0.1" value="1">
+                    <input class="input-range" id="input-filtro-opacidad" type="range" min="0" max="1" step="0.1" value="1">
 
                     <label class="label-filtros" for="input-filtro-contraste">CONTRASTE</label>
-                    <input id="input-filtro-contraste" type="range" min="100" max="1000" step="1" value="100">
+                    <input class="input-range" id="input-filtro-contraste" type="range" min="100" max="1000" step="1" value="100">
 
                     <label class="label-filtros" for="input-filtro-desenfoque">DESENFOQUE</label>
-                    <input id="input-filtro-desenfoque" type="range" min="0" max="10" step="0.1" value="0">
+                    <input class="input-range" id="input-filtro-desenfoque" type="range" min="0" max="10" step="0.1" value="0">
 
                     <label class="label-filtros" for="input-filtro-escala-de-grises">ESCALA DE GRISES</label>
-                    <input id="input-filtro-escala-de-grises" type="range" min="0" max="100" step="01" value="0">
+                    <input class="input-range" id="input-filtro-escala-de-grises" type="range" min="0" max="100" step="01" value="0">
 
                     <label class="label-filtros" for="input-filtro-sepia">SEPIA</label>
-                    <input id="input-filtro-sepia" type="range" min="0" max="100" step="1" value="0">
+                    <input class="input-range" id="input-filtro-sepia" type="range" min="0" max="100" step="1" value="0">
 
                     <label class="label-filtros" for="input-filtro-hue">HUE</label>
-                    <input id="input-filtro-hue" type="range" min="0" max="359" step="1" value="0">
+                    <input class="input-range" id="input-filtro-hue" type="range" min="0" max="359" step="1" value="0">
 
                     <label class="label-filtros" for="input-filtro-saturado">SATURADO</label>
-                    <input id="input-filtro-saturado" type="range" min="100" max="1000" step="10" value="100">
+                    <input class="input-range" id="input-filtro-saturado" type="range" min="100" max="1000" step="10" value="100">
 
                     <label class="label-filtros" for="input-filtro-negativo">NEGATIVO</label>
-                    <input id="input-filtro-negativo" type="range" min="0" max="1" step="0.1" value="1">
+                    <input class="input-range" id="input-filtro-negativo" type="range" min="0" max="1" step="0.1" value="1">
                 </div>
                 <button class="boton-restablecer-filtros">Restablecer filtros</button>
         </section>
         <section class="contenedor-panel-texto">
 
-            <h2 class="panel-texto-titulo">TEXTO</h2>
+            <h2>TEXTO</h2>
 
             <div class="panel-texto-superior-inferior">
-
                 <h3>SUPERIOR</h3>
                 <textarea class="input-texto-superior" id="input-texto-superior">TOP TEXT</textarea>
                 <label class="label-input-texto"><input type="checkbox" id="input-checkbox-texto-superior">Sin texto
                     superior</label>
-
                 <h3>INFERIOR</h3>
                 <textarea class="input-texto-inferior" id="input-texto-inferior">BOTTOM TEXT</textarea>
                 <label class="label-input-texto"><input type="checkbox" id="input-checkbox-texto-superior">Sin texto
                     inferior</label>
-
             </div>
 
             <div class="panel-texto-fuente">
@@ -139,7 +136,7 @@
                     <h3>COLOR</h3>
                     <div class="panel-texto-color-contenedor">
                         <input type="color" class="input-color">
-                        <span class="color-texto-resultado-input">TEXTO</span>
+                        <span>TEXTO</span>
                     </div>
                 </div>
 
@@ -147,22 +144,21 @@
                     <h3>FONDO</h3>
                     <div class="panel-texto-color-contenedor">
                         <input type="color" class="input-color">
-                        <span class="color-fondo-resultado-input">FONDO</span>
+                        <span>FONDO</span>
                     </div>
                 </div>
             </div>
 
 
-            <div class="panel-texto-contorno">
+            <div class="panel-texto-contorno-espaciado-interlineado">
                 <h3>CONTORNO</h3>
                 <button class="botones-panel-texto" id="input-contorno-ninguno">Ninguno</button>
                 <button class="botones-panel-texto" id="input-contorno-claro">Claro</button>
                 <button class="botones-panel-texto" id="input-contorno-oscuro">Oscuro</button>
-            </div>
-
-            <div class="panel-texto-espaciado-interlineado">
+        
                 <h3>ESPACIADO</h3>
                 <input class="input-number input-espaciado" type="number" max="50" min="10">
+
                 <h3>INTERLINEADO</h3>
                 <select class="input-select input-interlineado" name="interlineados" id="input-interlineado">
                     <option value="0.8">0.8</option>

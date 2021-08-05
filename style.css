@@ -30,7 +30,7 @@ body {
     background-color: #303b52;
 }
 
-/* Estilos Generales */
+/* Estilos Input */
 
 .input-select {
     background-color: #444c59;
@@ -50,7 +50,7 @@ body {
     outline: none;
 }
 
-input[type=range] {
+.input-range {
     background-color: #444c59;
     width: 100%;
     color: white;
@@ -75,7 +75,10 @@ input[type=range] {
     border-radius: 100%;
 }
 
+/* Estilos en general */
+
 h2 {
+    font-size: 18px;
     text-align: center;
 }
 
@@ -88,10 +91,10 @@ main {
 }
 
 
-/* Estilos main */
+/* Estilos canvas */
 
 
-.contenedor-main {
+.contenedor-canvas {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,9 +104,9 @@ main {
     height: 500px;
     width: 500px;
     background-color: black;
-    padding: 0;
     margin: 20px;
-    align-items: stretch;
+    display: flex;
+    flex-direction: column;
 }
 
 .texto-superior, .texto-inferior {
@@ -115,7 +118,8 @@ main {
 }
 
 .contenedor-imagen {
-    height: 375px;
+    height: 100%;
+    overflow: hidden;
 }
 
 
@@ -132,14 +136,13 @@ main {
     background-color: #3a8152;
 }
 
-/* Estilos filtro imagen */
+/* Estilos panel imagen */
 
 .contenedor-panel-imagen {
     padding: 10px 30px;
     background-color: #222a3a;
     display: flex;
     flex-direction: column;
-    position: relative;
 }
 
 
@@ -157,7 +160,7 @@ main {
 
 .panel-imagen-contenedor-fondo-color, .panel-imagen-contenedor-fondo-mezcla  {
     background-color: #444c59;
-    height: 20px;
+    height: 25px;
     width: 50%;
     padding: 5px;
     border-radius: 5px;
@@ -167,22 +170,15 @@ main {
     margin-right: 5px;
 }
 
-
-.input-modo-mezcla {
-    background-color: #444c59;
-    border: none;
-    color: white;
+.panel-imagen-contenedor-filtros {
+    display: flex;
+    flex-direction: column;
 }
 
 .label-filtros {
     font-size: 12px;
     margin-bottom: 10px;
     margin-top: 10px;
-}
-
-.panel-imagen-contenedor-filtros {
-    display: flex;
-    flex-direction: column;
 }
 
 .boton-restablecer-filtros {
@@ -208,7 +204,6 @@ main {
     background-color: #222a3a;
     display: flex;
     flex-direction: column;
-    position: relative;
 }
 
 .panel-texto-superior-inferior {
