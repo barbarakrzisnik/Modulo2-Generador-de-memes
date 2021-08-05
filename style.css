@@ -6,6 +6,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    display: flex;
+    width: 100%;
 }
 
 .header {
@@ -28,7 +30,7 @@ body {
     background-color: #303b52;
 }
 
-/* Input general */
+/* Estilos Generales */
 
 .input-select {
     background-color: #444c59;
@@ -36,9 +38,41 @@ body {
     color: white;
 }
 
-/* Estilos main */
+.input-color {
+    border-radius: 80px;
+    margin-right: 10px;
+    height: 20px;
+    width: 20px;
+    border: none;
+    outline: none;
+}
+
+.input-color::-webkit-color-swatch-wrapper {
+    padding: 0; 
+}
+
+.input-color::-webkit-color-swatch {
+    border: none;
+    border-radius: 100%;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    font-size: 16px;
+}
 
 main {
+    width: 100%;
+}
+
+
+/* Estilos main */
+
+
+.contenedor-main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -86,18 +120,11 @@ main {
     overflow: scroll; */
     padding: 10px 30px;
     background-color: #222a3a;
-    display: none;
+    display: flex;
     flex-direction: column;
-    position: absolute;
+    /* position: absolute; */
 }
 
-h2 {
-    text-align: center;
-}
-
-h3 {
-    font-size: 16px;
-}
 
 .panel-imagen-input-url {
     border: none;
@@ -123,23 +150,6 @@ h3 {
     margin-right: 5px;
 }
 
-.input-color {
-    border-radius: 80px;
-    margin-right: 10px;
-    height: 20px;
-    width: 20px;
-    border: none;
-    outline: none;
-}
-
-.input-color::-webkit-color-swatch-wrapper {
-    padding: 0; 
-}
-
-.input-color::-webkit-color-swatch {
-    border: none;
-    border-radius: 100%;
-}
 
 .input-modo-mezcla {
     background-color: #444c59;
