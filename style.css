@@ -47,6 +47,14 @@ body {
     outline: none;
 }
 
+input[type=range] {
+    background-color: #444c59;
+    width: 100%;
+    color: white;
+    border-radius: 10px;
+    height: 5px;
+}
+
 .input-color::-webkit-color-swatch-wrapper {
     padding: 0; 
 }
@@ -77,6 +85,7 @@ main {
     flex-direction: column;
     align-items: center;
 }
+
 .contenedor-meme {
     height: 500px;
     width: 500px;
@@ -115,14 +124,11 @@ main {
 /* Estilos filtro imagen */
 
 .contenedor-panel-imagen {
-    width: 240px;
-    /* height: 80%;
-    overflow: scroll; */
     padding: 10px 30px;
     background-color: #222a3a;
-    display: flex;
+    display: none;
     flex-direction: column;
-    /* position: absolute; */
+    position: relative;
 }
 
 
@@ -168,13 +174,7 @@ main {
     flex-direction: column;
 }
 
-input[type=range] {
-    background-color: #444c59;
-    width: 100%;
-    color: white;
-    border-radius: 10px;
-    height: 5px;
-}
+
 
 .boton-restablecer-filtros {
     margin-top: 20px;
@@ -194,12 +194,12 @@ input[type=range] {
 /* Estilos panel texto */
 
 .contenedor-panel-texto {
-    width: 240px;
+    width: 250px;
     padding: 10px 30px;
     background-color: #222a3a;
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: relative;
 }
 
 .panel-texto-superior-inferior {
