@@ -15,21 +15,22 @@
 
 <body>
     <main>
-    <header class="header">
+        <header class="header">
             <h1>Generador de memes</h1>
             <div class="contenedor-botones-header">
                 <button class="boton-nav" id="nav-boton-imagen"><i class="far fa-file-image"></i> Imagen</button>
                 <button class="boton-nav" id="boton-texto"><i class="fas fa-font"></i> Texto</button>
                 <button class="boton-nav" id="boton-modo-oscuro"><i class="far fa-lightbulb"></i> Modo Oscuro</button>
             </div>
-        </header>   
+        </header>
         <div class="contenedor-main">
             <div class="contenedor-meme">
                 <p class="texto-superior" id="texto-superior">Top text</p>
                 <div class="contenedor-imagen"></div>
                 <p class="texto-inferior" id="texto-inferior">Bottom text</p>
             </div>
-            <div><button class="boton-descargar-imagen" id="boton-descargar-imagen"><i class="fas fa-download"></i> Descargar imagen</button></div>
+            <div><button class="boton-descargar-imagen" id="boton-descargar-imagen"><i class="fas fa-download"></i>
+                    Descargar imagen</button></div>
         </div>
     </main>
     <aside>
@@ -40,13 +41,13 @@
                 <h3>URL</h3>
                 <input type="text" class="panel-imagen-input-url" id="input-url">
             </div>
-                <h3>FONDO</h3>
+            <h3>FONDO</h3>
             <div class="panel-imagen-contenedor-fondo">
                 <div class="panel-imagen-contenedor-fondo-color">
                     <input type="color" class="input-color"><span>COLOR</span>
                 </div>
                 <div class="panel-imagen-contenedor-fondo-mezcla">
-                     <select name="modo-mezcla" id="input-modo-mezcla" class="input-modo-mezcla input-select">
+                    <select name="modo-mezcla" id="input-modo-mezcla" class="input-modo-mezcla input-select">
                         <option value="Ninguno">Ninguno</option>
                         <option value="Aclarar">Aclarar</option>
                         <option value="Oscurecer">Oscurecer</option>
@@ -82,95 +83,99 @@
                     <input id="input-filtro-hue" type="range" min="0" max="359" step="1" value="0">
 
                     <label class="label-filtros" for="input-filtro-saturado">SATURADO</label>
-                    <input id="input-filtro-saturado" type="range" min="100" max="1000"  step="10" value="100">
+                    <input id="input-filtro-saturado" type="range" min="100" max="1000" step="10" value="100">
 
                     <label class="label-filtros" for="input-filtro-negativo">NEGATIVO</label>
-                    <input id="input-filtro-negativo" type="range" min="0" max="1"  step="0.1" value="1">
+                    <input id="input-filtro-negativo" type="range" min="0" max="1" step="0.1" value="1">
                 </div>
                 <button class="boton-restablecer-filtros">Restablecer filtros</button>
         </section>
         <section class="contenedor-panel-texto">
 
-                <h2 class="panel-texto-titulo">TEXTO</h2>
+            <h2 class="panel-texto-titulo">TEXTO</h2>
 
-                <div class="panel-texto-superior-inferior">
+            <div class="panel-texto-superior-inferior">
 
-                    <h3>SUPERIOR</h3>
-                    <textarea class="input-texto-superior" id="input-texto-superior">TOP TEXT</textarea>
-                    <label class="label-input-texto"><input type="checkbox" id="input-checkbox-texto-superior">Sin texto superior</label>
+                <h3>SUPERIOR</h3>
+                <textarea class="input-texto-superior" id="input-texto-superior">TOP TEXT</textarea>
+                <label class="label-input-texto"><input type="checkbox" id="input-checkbox-texto-superior">Sin texto
+                    superior</label>
 
-                    <h3>INFERIOR</h3>
-                    <textarea class="input-texto-inferior" id="input-texto-inferior">BOTTOM TEXT</textarea>
-                    <label class="label-input-texto"><input type="checkbox" id="input-checkbox-texto-superior">Sin texto inferior</label>
+                <h3>INFERIOR</h3>
+                <textarea class="input-texto-inferior" id="input-texto-inferior">BOTTOM TEXT</textarea>
+                <label class="label-input-texto"><input type="checkbox" id="input-checkbox-texto-superior">Sin texto
+                    inferior</label>
 
+            </div>
+
+            <div class="panel-texto-fuente">
+                <h3>FUENTE</h3>
+
+                <select name="fuentes" id="input-fuente" class="input-select input-select-fuente">
+                    <option value="Arial">Arial</option>
+                    <option value="Arial Black">Arial Black</option>
+                    <option value="American Typewriter">American Typewriter</option>
+                    <option value="Andale Mono">Andale Mono</option>
+                    <option value="Comic Sans MS">Comic Sans MS</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Impact">Impact</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                </select>
+                <div>
+                    <input class="input-tamanio-fuente input-number" id="input-tamanio-fuente" type="number" max="90"
+                        min="12">
+                    <button class="botones-panel-texto" id="input-alineado-izquierda"><i
+                            class="fas fa-align-left"></i></button>
+                    <button class="botones-panel-texto" id="input-alineado-centro"><i
+                            class="fas fa-align-center"></i></button>
+                    <button class="botones-panel-texto" id="input-alineado-centro"><i
+                            class="fas fa-align-right"></i></button>
                 </div>
 
-                <div class="panel-texto-fuente">
-                    <h3>FUENTE</h3>
-                    
-                    <select name="fuentes" id="input-fuente" class="input-select input-select-fuente">
-                        <option value="Arial">Arial</option>
-                        <option value="Arial Black">Arial Black</option>
-                        <option value="American Typewriter">American Typewriter</option>
-                        <option value="Andale Mono">Andale Mono</option>
-                        <option value="Comic Sans MS">Comic Sans MS</option>
-                        <option value="Helvetica">Helvetica</option>
-                        <option value="Impact">Impact</option>
-                        <option value="Verdana">Verdana</option>
-                        <option value="Times New Roman">Times New Roman</option>
-                    </select>
-                    <div>
-                        <input class="input-tamanio-fuente" type="number" max="90" min="12">
-                        <button class="botones-panel-texto" input-alineado-izquierda"><i class="fas fa-align-left"></i></button>
-                        <button class="botones-panel-texto" id="input-alineado-centro"><i class="fas fa-align-center"></i></button>
-                        <button class="botones-panel-texto" id="input-alineado-centro"><i class="fas fa-align-right"></i></button>
-                    </div>
-                    
-                </div>
-
-                <div class="panel-texto-fuente">
-                    <div class="panel-texto-color">
-                        <div class="panel-texto-contenedor-color-texto"> 
-                            <h3>COLOR</h3>
-                            <div class="panel-imagen-contenedor-fondo-color">
-                                <input type="color" class="input-color">
-                                <span class="color-texto-resultado-input">TEXTO</span>
-                            </div>
-                        </div>
-    
-                        <div class="panel-texto-contenedor-color-fondo"> 
-                            <h3>FONDO</h3>
-                            <div class="panel-imagen-contenedor-fondo-color">
-                                <input type="color" class="input-color">
-                                <span class="color-fondo-resultado-input">FONDO</span>
-                            </div>
-                        </div>
+            </div>
+            <div class="panel-texto-color">
+                <div>
+                    <h3>COLOR</h3>
+                    <div class="panel-texto-color-contenedor">
+                        <input type="color" class="input-color">
+                        <span class="color-texto-resultado-input">TEXTO</span>
                     </div>
                 </div>
 
-                <div class="panel-texto-contorno">
-                    <h3>CONTORNO</h3>
-                    <button class="botones-panel-texto" id="input-contorno-ninguno">Ninguno</button>
-                    <button class="botones-panel-texto" id="input-contorno-claro">Claro</button>
-                    <button class="botones-panel-texto" id="input-contorno-oscuro">Oscuro</button>
+                <div>
+                    <h3>FONDO</h3>
+                    <div class="panel-texto-color-contenedor">
+                        <input type="color" class="input-color">
+                        <span class="color-fondo-resultado-input">FONDO</span>
+                    </div>
                 </div>
+            </div>
 
-                <div class="panel-texto-espaciado-interlineado">
-                    <h3>ESPACIADO</h3>
-                    <input type="number" max="50" min="10">
-                    <h3>INTERLINEADO</h3>
-                    <select class="input-select" name="interlineados" id="input-interlineado">
-                        <option value="0.8">0.8</option>
-                        <option value="1">1</option>
-                        <option value="1.2">1.2</option>
-                        <option value="1.5">1.5</option>
-                        <option value="2">2</option>
-                        <option value="2.5">2.5</option>
-                </div>
 
-            </section>
+            <div class="panel-texto-contorno">
+                <h3>CONTORNO</h3>
+                <button class="botones-panel-texto" id="input-contorno-ninguno">Ninguno</button>
+                <button class="botones-panel-texto" id="input-contorno-claro">Claro</button>
+                <button class="botones-panel-texto" id="input-contorno-oscuro">Oscuro</button>
+            </div>
+
+            <div class="panel-texto-espaciado-interlineado">
+                <h3>ESPACIADO</h3>
+                <input class="input-number input-espaciado" type="number" max="50" min="10">
+                <h3>INTERLINEADO</h3>
+                <select class="input-select input-interlineado" name="interlineados" id="input-interlineado">
+                    <option value="0.8">0.8</option>
+                    <option value="1">1</option>
+                    <option value="1.2">1.2</option>
+                    <option value="1.5">1.5</option>
+                    <option value="2">2</option>
+                    <option value="2.5">2.5</option>
+            </div>
+
+        </section>
     </aside>
-    
+
 
     <script src="index.js"></script>
 </body>
