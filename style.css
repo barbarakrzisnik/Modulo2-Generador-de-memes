@@ -34,6 +34,9 @@ body {
 
 .input-select {
     background-color: #444c59;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
     border: none;
     color: white;
 }
@@ -55,6 +58,14 @@ input[type=range] {
     height: 5px;
 }
 
+.input-number {
+    background-color: #444c59;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    width: 100%;
+}
+
 .input-color::-webkit-color-swatch-wrapper {
     padding: 0; 
 }
@@ -69,7 +80,7 @@ h2 {
 }
 
 h3 {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 main {
@@ -126,7 +137,7 @@ main {
 .contenedor-panel-imagen {
     padding: 10px 30px;
     background-color: #222a3a;
-    display: none;
+    display: flex;
     flex-direction: column;
     position: relative;
 }
@@ -173,8 +184,6 @@ main {
     display: flex;
     flex-direction: column;
 }
-
-
 
 .boton-restablecer-filtros {
     margin-top: 20px;
@@ -224,22 +233,46 @@ main {
     flex-direction: column;
 }
 
+.panel-texto-color {
+    display: flex;
+}
+
+.panel-texto-color-contenedor {
+    background-color: #444c59;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+    display: flex;
+}
+
+.input-tamanio-fuente {
+    width: 75px;
+    padding: 10px;
+}
+
 .botones-panel-texto {
-    margin-top: 10px;
     margin-left: 5px;
-    width: 50px;
     background-color: #2f394d;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 10px 15px;
     border-radius: 5px;
-
 }
 
-.boton-panel-texto:hover {
+.botones-panel-texto:hover {
     background-color: #3f4c66;
 }
 
 .input-select-fuente {
     padding: 10px;
+}
+
+.input-espaciado {
+    height: 30px;
+}
+
+.input-interlineado {
+    width: 100%;
+    height: 30px;
 }
