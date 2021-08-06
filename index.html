@@ -44,7 +44,7 @@
             <h3>FONDO</h3>
             <div class="panel-imagen-contenedor-fondo">
                 <div class="panel-imagen-contenedor-fondo-color">
-                    <input type="color" class="input-color"><span>COLOR</span>
+                    <input type="color" class="input-color" id="input-color-fondo-imagen"><span>COLOR</span>
                 </div>
                 <div class="panel-imagen-contenedor-fondo-mezcla">
                     <select name="modo-mezcla" id="input-modo-mezcla" class="input-modo-mezcla input-select">
@@ -88,7 +88,7 @@
                     <label class="label-filtros" for="input-filtro-negativo">NEGATIVO</label>
                     <input class="input-range" id="input-filtro-negativo" type="range" min="0" max="1" step="0.1" value="1">
                 </div>
-                <button class="boton-restablecer-filtros">Restablecer filtros</button>
+                <button id="boton-restablecer-filtros" class="boton-restablecer-filtros">Restablecer filtros</button>
         </section>
         <section class="contenedor-panel-texto ocultar-panel" id="contenedor-panel-texto"> 
 
@@ -126,7 +126,7 @@
                             class="fas fa-align-left"></i></button>
                     <button class="botones-panel-texto" id="input-alineado-centro"><i
                             class="fas fa-align-center"></i></button>
-                    <button class="botones-panel-texto" id="input-alineado-centro"><i
+                    <button class="botones-panel-texto" id="input-alineado-derecha"><i
                             class="fas fa-align-right"></i></button>
                 </div>
 
@@ -142,7 +142,7 @@
 
                 <div>
                     <h3>FONDO</h3>
-                    <div class="panel-texto-color-contenedor">
+                    <div class="panel-texto-color-contenedor panel-texto-color-contenedor-fondo">
                         <input type="color" class="input-color">
                         <span>FONDO</span>
                     </div>
@@ -157,7 +157,7 @@
                 <button class="botones-panel-texto" id="input-contorno-oscuro">Oscuro</button>
         
                 <h3>ESPACIADO</h3>
-                <input class="input-number input-espaciado" type="number" max="50" min="10">
+                <input class="input-number input-espaciado" id="input-espaciado" type="number" max="50" min="10">
 
                 <h3>INTERLINEADO</h3>
                 <select class="input-select input-interlineado" name="interlineados" id="input-interlineado">
