@@ -196,7 +196,7 @@ main {
 }
 
 .boton-restablecer-filtros:hover {
-    background-color: #c2c1c1;
+    background-color: rgb(158, 158, 158);
 }
 
 /* Estilos panel texto */
@@ -261,7 +261,7 @@ main {
 }
 
 .botones-panel-texto:hover {
-    background-color: #3f4c66;
+    background-color: rgb(158, 158, 158);
 }
 
 .input-select-fuente {
