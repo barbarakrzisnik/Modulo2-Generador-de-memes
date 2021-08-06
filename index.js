@@ -20,8 +20,10 @@ const inputModoMezcla = document.getElementById("input-modo-mezcla")
 const botonRestablecerFiltros = document.getElementById("boton-restablecer-filtros")
 
 //Panel Texto
+//Parrafos
 const inputTextoSuperior = document.getElementById("input-texto-superior")
 const inputTextoInferior = document.getElementById("input-texto-inferior")
+//Posibles input
 const inputTipoFuente = document.getElementById("input-fuente")
 const inputTamanioFuente = document.getElementById("input-tamanio-fuente")
 const inputAlineadoIzquierda = document.getElementById("input-alineado-izquierda")
@@ -32,6 +34,7 @@ const botonContornoClaro = document.getElementById("input-contorno-claro")
 const botonContornoOscuro = document.getElementById("input-contorno-oscuro")
 const inputEspaciado = document.getElementById("input-espaciado")
 const inputInterlineado = document.getElementById("input-interlineado")
+const inputColorTexto = document.getElementById("input-color-texto")
 
 //Clases para modo oscuro
 const body = document.querySelector("body")
@@ -109,12 +112,44 @@ inputUrl.oninput = () => {
     contenedorImagen.src = inputUrl.value 
 }
 
-// Funcionamiento input de texto
+// Funcionamiento Panel de texto
 
+//Entrada de texto
 inputTextoSuperior.oninput = () => {
     resultadoTextoSuperior.textContent = inputTextoSuperior.value
 }
 
 inputTextoInferior.oninput = () => {
     resultadoTextoInferior.textContent = inputTextoInferior.value
+}
+
+//Tipo de fuente
+inputTipoFuente.oninput = () => {
+    resultadoTextoSuperior.style.fontFamily = inputTipoFuente.value 
+    resultadoTextoInferior.style.fontFamily = inputTipoFuente.value 
+    
+}
+
+//Tamanio de fuente
+inputTamanioFuente.oninput = () => {
+    resultadoTextoSuperior.style.fontSize = inputTamanioFuente.value + "px"
+    resultadoTextoInferior.style.fontSize = inputTamanioFuente.value + "px"
+    
+}
+
+//Alineacion de texto
+
+inputAlineadoIzquierda.onclick = () => {
+    resultadoTextoSuperior.style.textAlign = "left"
+    resultadoTextoInferior.style.textAlign = "left"
+}
+
+inputAlineadoCentro.onclick = () => {
+    resultadoTextoSuperior.style.textAlign = "center"
+    resultadoTextoInferior.style.textAlign = "center"
+}
+
+inputAlineadoDerecha.onclick = () => {
+    resultadoTextoSuperior.style.textAlign = "right"
+    resultadoTextoInferior.style.textAlign = "right"
 }
