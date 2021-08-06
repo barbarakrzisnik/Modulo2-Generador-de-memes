@@ -121,6 +121,14 @@ main {
 .contenedor-imagen {
     height: 100%;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen {
+    width: 100%;
+    overflow: hidden;
 }
 
 
@@ -198,6 +206,7 @@ main {
 .boton-restablecer-filtros:hover {
     background-color: rgb(158, 158, 158);
 }
+
 
 /* Estilos panel texto */
 

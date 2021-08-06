@@ -6,6 +6,13 @@ const botonImagen = document.getElementById("nav-boton-imagen")
 const botonTexto = document.getElementById("nav-boton-texto")
 const botonModoOscuro = document.getElementById("nav-boton-modo-oscuro")
 
+//Canvas
+const botonDescargarImagen = document.getElementById("boton-descargar-imagen")
+const contenedorMeme = document.getElementById("contenedor-canvas")
+const contenedorImagen = document.getElementById("contenedor-imagen")
+const resultadoTextoSuperior = document.getElementById("resultado-texto-superior")
+const resultadoTextoInferior = document.getElementById("resultado-texto-inferior")
+
 // Panel imagen
 const panelImagen = document.getElementById("contenedor-panel-imagen")
 const inputUrl = document.getElementById("input-url")
@@ -87,3 +94,27 @@ const activarModoOscuro = () => {
 
 botonModoOscuro.onclick = activarModoOscuro
 
+//Funcionamiento boton de descarga / NO FUNCIONA
+
+botonDescargarImagen.onclick = () => {
+    domtoimage.toBlob(contenedorMeme)
+    .then(function (blob) {
+    window.saveAs(blob, 'mi-meme.png');
+});
+}
+
+// Funcionamiento de URL de imagen
+
+inputUrl.oninput = () => {
+    contenedorImagen.src = inputUrl.value 
+}
+
+// Funcionamiento input de texto
+
+inputTextoSuperior.oninput = () => {
+    resultadoTextoSuperior.textContent = inputTextoSuperior.value
+}
+
+inputTextoInferior.oninput = () => {
+    resultadoTextoInferior.textContent = inputTextoInferior.value
+}

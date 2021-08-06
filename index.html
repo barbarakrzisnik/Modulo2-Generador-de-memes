@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/096a878366.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
     <title>Generador de memes</title>
 </head>
 
@@ -23,11 +25,11 @@
                 <button class="boton-nav" id="nav-boton-modo-oscuro"><i class="far fa-lightbulb"></i> Modo Oscuro</button>
             </div>
         </header>
-        <div class="contenedor-canvas">
+        <div class="contenedor-canvas" id="contenedor-canvas">
             <div class="contenedor-meme">
-                <p class="texto-superior" id="texto-superior">Top text</p>
-                <div class="contenedor-imagen"></div>
-                <p class="texto-inferior" id="texto-inferior">Bottom text</p>
+                <p class="texto-superior" id="resultado-texto-superior">Top text</p>
+                <div class="contenedor-imagen"><img src="" class="imagen" id="contenedor-imagen"></div>
+                <p class="texto-inferior" id="resultado-texto-inferior">Bottom text</p>
             </div>
             <div><button class="boton-descargar-imagen" id="boton-descargar-imagen"><i class="fas fa-download"></i>
                     Descargar imagen</button></div>
