@@ -32,9 +32,9 @@ const inputTamanioFuente = document.getElementById("input-tamanio-fuente")
 const inputAlineadoIzquierda = document.getElementById("input-alineado-izquierda")
 const inputAlineadoCentro = document.getElementById("input-alineado-centro")
 const inputAlineadoDerecha = document.getElementById("input-alineado-derecha")
-const botonContornoNinguno = document.getElementById("input-contorno-ninguno")
-const botonContornoClaro = document.getElementById("input-contorno-claro")
-const botonContornoOscuro = document.getElementById("input-contorno-oscuro")
+const inputContornoNinguno = document.getElementById("input-contorno-ninguno")
+const inputContornoClaro = document.getElementById("input-contorno-claro")
+const inputContornoOscuro = document.getElementById("input-contorno-oscuro")
 const inputEspaciado = document.getElementById("input-espaciado")
 const inputInterlineado = document.getElementById("input-interlineado")
 const inputColorTexto = document.getElementById("input-color-texto")
@@ -66,8 +66,6 @@ const mostrarPanelTexto = () => {
 botonTexto.onclick = mostrarPanelTexto
 
 
-
-
 //Funcionamiento boton Modo Oscuro
 const activarModoOscuro = () => {
     body.classList.toggle("modo-oscuro-gris-claro")
@@ -91,9 +89,9 @@ const activarModoOscuro = () => {
     inputAlineadoDerecha.classList.toggle("modo-oscuro-gris-claro")
     contenedorColorTexto.classList.toggle("modo-oscuro-gris-claro")
     contenedorColorFondoTexto.classList.toggle("modo-oscuro-gris-claro")
-    botonContornoNinguno.classList.toggle("modo-oscuro-gris-claro")
-    botonContornoOscuro.classList.toggle("modo-oscuro-gris-claro")
-    botonContornoClaro.classList.toggle("modo-oscuro-gris-claro")
+    inputContornoNinguno.classList.toggle("modo-oscuro-gris-claro")
+    inputContornoOscuro.classList.toggle("modo-oscuro-gris-claro")
+    inputContornoClaro.classList.toggle("modo-oscuro-gris-claro")
     inputEspaciado.classList.toggle("modo-oscuro-gris-claro")
     inputInterlineado.classList.toggle("modo-oscuro-gris-claro")
 
@@ -101,7 +99,9 @@ const activarModoOscuro = () => {
 
 botonModoOscuro.onclick = activarModoOscuro
 
-// Funcionamiento de URL de imagen
+// Funcionamiento Panel de imagen
+
+// URL de imagen
 
 inputUrl.oninput = () => {
     contenedorImagen.src = inputUrl.value 
@@ -150,6 +150,7 @@ inputAlineadoDerecha.onclick = () => {
 }
 
 // Color de texto / Color fondo texto
+
 inputColorTexto.oninput = () => {
     resultadoTextoSuperior.style.color = inputColorTexto.value
     resultadoTextoInferior.style.color = inputColorTexto.value
@@ -160,12 +161,29 @@ inputColorTextoFondo.oninput = () => {
     resultadoTextoInferior.style.backgroundColor = inputColorTextoFondo.value
 }
 
+// Espaciado
+
+inputEspaciado.oninput = () => {
+
+    resultadoTextoSuperior.style.paddingTop = inputEspaciado.value + "px"
+    resultadoTextoSuperior.style.paddingBottom = inputEspaciado.value + "px"
+    resultadoTextoInferior.style.paddingTop = inputEspaciado.value + "px"
+    resultadoTextoInferior.style.paddingBottom = inputEspaciado.value + "px"
+}
+
+// Interlineado
+
+inputInterlineado.oninput = () => {
+    resultadoTextoSuperior.style.lineHeight = inputInterlineado.value 
+    resultadoTextoInferior.style.lineHeight = inputInterlineado.value 
+}
+
 
 
 
 //_______________________________________________________
 
-// Que apararezcan texto superior e inferior - NO FUNCIONA
+// Que apararezcan texto superior e inferior / NO FUNCIONA
 // checkboxTextoSuperior.oninput = () => {
 //     if (checkboxTextoSuperior.checked = true) {
 //       resultadoTextoSuperior.style.display = "none"
@@ -180,6 +198,23 @@ inputColorTextoFondo.oninput = () => {
 //     .then(function (blob) {
 //     window.saveAs(blob, 'mi-meme.png');
 // });
+// }
+
+// Botones de contorno / NO FUNCIONA
+
+// inputContornoOscuro.onclick = () => {
+//     resultadoTextoSuperior.style.webkitTextStroke = "2px black"
+//     resultadoTextoInferior.style.webkitTextStroke = "2px black"
+// }
+
+// inputContornoNinguno.onclick = () => {
+//     resultadoTextoSuperior.style.webkitTextStroke = "2px transparent"
+//     resultadoTextoInferior.style.webkitTextStroke = "2px transparent"
+// }
+
+// inputContornoClaro.onclick = () => {
+//     resultadoTextoSuperior.style.webkitTextStroke = "2px white"
+//     resultadoTextoInferior.style.webkitTextStroke = "2px white"
 // }
  
 
