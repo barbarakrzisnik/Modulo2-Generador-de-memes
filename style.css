@@ -113,9 +113,14 @@ main {
 .texto-superior, .texto-inferior {
     background-color: white;
     color: black;
-    padding: 20px 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 2.5;
     text-align: center;
     margin: 0;
+    -webkit-text-stroke: 1px transparent;
 }
 
 .contenedor-imagen {
