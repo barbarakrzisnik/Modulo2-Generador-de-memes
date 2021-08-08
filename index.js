@@ -23,7 +23,10 @@ const botonRestablecerFiltros = document.getElementById("boton-restablecer-filtr
 //Parrafos
 const inputTextoSuperior = document.getElementById("input-texto-superior")
 const inputTextoInferior = document.getElementById("input-texto-inferior")
+
 //Posibles input
+const checkboxTextoSuperior = document.getElementById("input-checkbox-texto-superior")
+const checkboxTextoInferior = document.getElementById("input-checkbox-texto-inferior")
 const inputTipoFuente = document.getElementById("input-fuente")
 const inputTamanioFuente = document.getElementById("input-tamanio-fuente")
 const inputAlineadoIzquierda = document.getElementById("input-alineado-izquierda")
@@ -35,6 +38,7 @@ const botonContornoOscuro = document.getElementById("input-contorno-oscuro")
 const inputEspaciado = document.getElementById("input-espaciado")
 const inputInterlineado = document.getElementById("input-interlineado")
 const inputColorTexto = document.getElementById("input-color-texto")
+const inputColorTextoFondo = document.getElementById("input-color-texto-fondo")
 
 //Clases para modo oscuro
 const body = document.querySelector("body")
@@ -97,15 +101,6 @@ const activarModoOscuro = () => {
 
 botonModoOscuro.onclick = activarModoOscuro
 
-//Funcionamiento boton de descarga / NO FUNCIONA
-
-botonDescargarImagen.onclick = () => {
-    domtoimage.toBlob(contenedorMeme)
-    .then(function (blob) {
-    window.saveAs(blob, 'mi-meme.png');
-});
-}
-
 // Funcionamiento de URL de imagen
 
 inputUrl.oninput = () => {
@@ -153,3 +148,39 @@ inputAlineadoDerecha.onclick = () => {
     resultadoTextoSuperior.style.textAlign = "right"
     resultadoTextoInferior.style.textAlign = "right"
 }
+
+// Color de texto / Color fondo texto
+inputColorTexto.oninput = () => {
+    resultadoTextoSuperior.style.color = inputColorTexto.value
+    resultadoTextoInferior.style.color = inputColorTexto.value
+}
+
+inputColorTextoFondo.oninput = () => {
+    resultadoTextoSuperior.style.backgroundColor = inputColorTextoFondo.value
+    resultadoTextoInferior.style.backgroundColor = inputColorTextoFondo.value
+}
+
+
+
+
+//_______________________________________________________
+
+// Que apararezcan texto superior e inferior - NO FUNCIONA
+// checkboxTextoSuperior.oninput = () => {
+//     if (checkboxTextoSuperior.checked = true) {
+//       resultadoTextoSuperior.style.display = "none"
+//     }
+
+// }
+
+//Funcionamiento boton de descarga / NO FUNCIONA
+
+// botonDescargarImagen.onclick = () => {
+//     domtoimage.toBlob(contenedorMeme)
+//     .then(function (blob) {
+//     window.saveAs(blob, 'mi-meme.png');
+// });
+// }
+ 
+
+ 
