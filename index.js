@@ -1,4 +1,4 @@
-// Elementos del HTML
+///////////////// Elementos del HTML /////////////////
 
 // Botones navegador
 const panelTexto = document.getElementById("contenedor-panel-texto")
@@ -14,7 +14,8 @@ const imagenDelUsuario = document.getElementById("imagen")
 const resultadoTextoSuperior = document.getElementById("resultado-texto-superior")
 const resultadoTextoInferior = document.getElementById("resultado-texto-inferior")
 
-// Panel imagen
+///////////////// Panel imagen /////////////////
+
 const panelImagen = document.getElementById("contenedor-panel-imagen")
 const inputUrl = document.getElementById("input-url")
 const inputColorFondoImagen = document.getElementById("input-color-fondo-imagen")
@@ -35,7 +36,8 @@ const inputNegativo = document.getElementById("input-filtro-negativo")
 
 
 
-//Panel Texto
+///////////////// Panel Texto /////////////////
+
 //Parrafos
 const inputTextoSuperior = document.getElementById("input-texto-superior")
 const inputTextoInferior = document.getElementById("input-texto-inferior")
@@ -54,9 +56,12 @@ const inputContornoOscuro = document.getElementById("input-contorno-oscuro")
 const inputEspaciado = document.getElementById("input-espaciado")
 const inputInterlineado = document.getElementById("input-interlineado")
 const inputColorTexto = document.getElementById("input-color-texto")
+const resultadoColorTexto = document.getElementById("resultado-color-texto")
 const inputColorTextoFondo = document.getElementById("input-color-texto-fondo")
+const resultadoColorFondoTexto = document.getElementById("resultado-color-fondo-texto")
 
-//Clases para modo oscuro
+
+///////////////// Clases para modo oscuro /////////////////
 const body = document.querySelector("body")
 const header = document.querySelector("header")
 const contenedorColorImagen = document.querySelector(".panel-imagen-contenedor-fondo-color")
@@ -64,6 +69,8 @@ const contenedorModoMezcla = document.querySelector(".panel-imagen-contenedor-fo
 const contenedorColorTexto = document.querySelector(".panel-texto-color-contenedor")
 const contenedorColorFondoTexto = document.querySelector(".panel-texto-color-contenedor-fondo")
 
+
+///////////////// FUNCIONAMIENTO 
 
 
 // Funcionamiento boton Imagen
@@ -83,7 +90,7 @@ botonTexto.onclick = mostrarPanelTexto
 
 
 //Funcionamiento boton Modo Oscuro
-const activarModoOscuro = () => {
+botonModoOscuro.onclick = () => {
     body.classList.toggle("modo-oscuro-gris-claro")
     header.classList.toggle("modo-oscuro-gris-oscuro")
     panelTexto.classList.toggle("modo-oscuro-gris-medio")
@@ -110,12 +117,18 @@ const activarModoOscuro = () => {
     inputContornoClaro.classList.toggle("modo-oscuro-gris-claro")
     inputEspaciado.classList.toggle("modo-oscuro-gris-claro")
     inputInterlineado.classList.toggle("modo-oscuro-gris-claro")
-
 }
 
-botonModoOscuro.onclick = activarModoOscuro
+//Funcionamiento boton de descarga / NO FUNCIONA
 
-// Funcionamiento Panel de imagen
+botonDescargarImagen.onclick = () => {
+    domtoimage.toBlob(contenedorMeme)
+    .then(function (blob) {
+    window.saveAs(blob, 'mi-meme.png');
+});
+}
+
+///////////////// Funcionamiento Panel de imagen /////////////////
 
 // URL de imagen
 
@@ -123,42 +136,65 @@ inputUrl.oninput = () => {
     imagenDelUsuario.src = inputUrl.value 
 }
 
-//Color y modo de capas
+//Color de fondo
 
 inputColorFondoImagen.oninput = () => {
     contenedorImagen.style.backgroundColor = (inputColorFondoImagen.value)
     resultadoColorFondoImagen.textContent = inputColorFondoImagen.value
-
 }
-// inputModoMezcla.oninput = () => {
-//     if (inputModoMezcla.value = "Aclarar") {
-//         imagenDelUsuario.style.mixBlendMode = ("lighten")
-// }
 
+//Modo mezcla
 
-// Filtos
-// inputBrillo.oninput = () => {
-//     imagenDelUsuario.style.filter = `brightness(${inputBrillo.value})`
-// }
+inputModoMezcla.onchange = () => {
+    if (inputModoMezcla === "Aclarar") {
+        imagenDelUsuario.style.backgroundBlendMode = "lighten"
+    }
+    else {
+        imagenDelUsuario.style.backgroundBlendMode = "none"
+    }
+}
 
-// inputOpacidad.oninput = () => {
-//     imagenDelUsuario.style.filter = `opacity(${inputOpacidad.value})`
-// }
+//Filtros
 
-// inputContraste.oninput = () => {
-//     imagenDelUsuario.style.filter = `contrast(${inputContraste.value})`
-// }
+const agregarFiltros = () => {
+    const brightness = inputBrillo.value
+    const opacity = inputOpacidad.value
+    const blur = inputDesenfoque.value
+    const contrast = inputContraste.value
+    const grayscale = inputEscalaDeGrises.value
+    const hue = inputHue.value
+    const sepia = inputSepia.value
+    const saturate = inputSaturado.value
+    const invert = inputNegativo.value
+    imagenDelUsuario.style.filter = `brightness(${brightness}) opacity(${opacity}) blur(${blur}px) contrast(${contrast}%) grayscale(${grayscale}%) hue-rotate(${hue}deg) sepia(${sepia}%) saturate(${saturate}%) invert(${invert})`
+}
 
-// inputDesenfoque.oninput = () => {
-//     imagenDelUsuario.style.filter = `blur(${inputDesenfoque.value}px)`
-// }
+inputBrillo.onchange = agregarFiltros
+inputOpacidad.onchange = agregarFiltros
+inputContraste.onchange = agregarFiltros
+inputDesenfoque.onchange = agregarFiltros
+inputEscalaDeGrises.onchange = agregarFiltros
+inputHue.onchange = agregarFiltros
+inputSepia.onchange = agregarFiltros
+inputSaturado.onchange = agregarFiltros
+inputNegativo.onchange = agregarFiltros
 
-// inputEscalaDeGrises.oninput = () => {
-//     imagenDelUsuario.style.filter = `greyscale(${inputEscalaDeGrises.value})`
-// }
+//Restablecer filtros
 
+botonRestablecerFiltros.onclick = () => {
+    inputBrillo.value = 1
+    inputOpacidad.value = 1
+    inputContraste.value = 0
+    inputDesenfoque.value = 0
+    inputEscalaDeGrises.value = 0
+    inputSepia.value = 0
+    inputHue.value = 0
+    inputSaturado.value = 100
+    inputNegativo.value = 0
+    imagenDelUsuario.style.filter = "none"
+}
 
-// Funcionamiento Panel de texto
+///////////////// Funcionamiento Panel de texto /////////////////
 
 //Entrada de texto
 inputTextoSuperior.oninput = () => {
@@ -168,6 +204,27 @@ inputTextoSuperior.oninput = () => {
 inputTextoInferior.oninput = () => {
     resultadoTextoInferior.textContent = inputTextoInferior.value
 }
+
+// Checked
+
+checkboxTextoSuperior.onchange = () => {
+    if (checkboxTextoSuperior.checked) {
+        resultadoTextoSuperior.style.display = "none"
+    }
+    else {
+        resultadoTextoSuperior.style.display = "block"
+    }
+}
+
+checkboxTextoInferior.onchange = () => {
+    if (checkboxTextoInferior.checked) {
+        resultadoTextoInferior.style.display = "none"
+    }
+    else {
+        resultadoTextoInferior.style.display = "block"
+    }
+}
+
 
 //Tipo de fuente
 inputTipoFuente.oninput = () => {
@@ -205,12 +262,16 @@ inputAlineadoDerecha.onclick = () => {
 inputColorTexto.oninput = () => {
     resultadoTextoSuperior.style.color = inputColorTexto.value
     resultadoTextoInferior.style.color = inputColorTexto.value
+    resultadoColorTexto.textContent = inputColorTexto.value
 }
 
 inputColorTextoFondo.oninput = () => {
     resultadoTextoSuperior.style.backgroundColor = inputColorTextoFondo.value
     resultadoTextoInferior.style.backgroundColor = inputColorTextoFondo.value
+    resultadoColorFondoTexto.textContent = inputColorTextoFondo.value
 }
+
+// Contorno
 
 // Espaciado
 
@@ -230,40 +291,10 @@ inputInterlineado.oninput = () => {
 }
 
 
+///////////////// RESPONSIVE
 
 
-//_______________________________________________________
 
-// Que apararezcan texto superior e inferior / NO FUNCIONA
-// checkboxTextoSuperior.oninput = () => {
-//     if (checkboxTextoSuperior.checked = true) {
-//       resultadoTextoSuperior.style.display = "none"
-//     }
 
-// }
 
-//Funcionamiento boton de descarga / NO FUNCIONA
 
-// botonDescargarImagen.onclick = () => {
-//     domtoimage.toBlob(contenedorMeme)
-//     .then(function (blob) {
-//     window.saveAs(blob, 'mi-meme.png');
-// });
-// }
-
-// Botones de contorno / NO FUNCIONA
-
-// inputContornoOscuro.onclick = () => {
-//     resultadoTextoSuperior.style.webkitTextStroke = "2px black"
-//     resultadoTextoInferior.style.webkitTextStroke = "2px black"
-// }
-
-// inputContornoNinguno.onclick = () => {
-//     resultadoTextoSuperior.style.webkitTextStroke = "2px transparent"
-//     resultadoTextoInferior.style.webkitTextStroke = "2px transparent"
-// }
-
-// inputContornoClaro.onclick = () => {
-//     resultadoTextoSuperior.style.webkitTextStroke = "2px white"
-//     resultadoTextoInferior.style.webkitTextStroke = "2px white"
-// }

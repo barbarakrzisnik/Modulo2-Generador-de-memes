@@ -128,14 +128,11 @@ main {
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .imagen {
     width: 100%;
     overflow: hidden;
-    mix-blend-mode: none;
-    /* filter: brightness() opacity() contrast() blur() grayscale() sepia() hue-rotate() saturate() invert(); */
 }
 
 
@@ -249,14 +246,23 @@ main {
     flex-direction: column;
 }
 
+#resultado-color-texto {
+    margin: 0;
+}
+
+#resultado-color-fondo-texto {
+    margin: 0;
+}
+
 .panel-texto-color {
     display: flex;
 }
 
 .panel-texto-color-contenedor {
     background-color: #e0e0e0;
+    width: 90px;
     font-size: 14px;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border-radius: 5px;
     margin-right: 10px;
     display: flex;
@@ -313,6 +319,5 @@ main {
     background-color: #30353f;
     color: white;
 }
-
 
 
