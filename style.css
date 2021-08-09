@@ -134,6 +134,8 @@ main {
 .imagen {
     width: 100%;
     overflow: hidden;
+    mix-blend-mode: none;
+    /* filter: brightness() opacity() contrast() blur() grayscale() sepia() hue-rotate() saturate() invert(); */
 }
 
 
@@ -311,4 +313,6 @@ main {
     background-color: #30353f;
     color: white;
 }
+
+
 

@@ -10,14 +10,30 @@ const botonModoOscuro = document.getElementById("nav-boton-modo-oscuro")
 const botonDescargarImagen = document.getElementById("boton-descargar-imagen")
 const contenedorMeme = document.getElementById("contenedor-canvas")
 const contenedorImagen = document.getElementById("contenedor-imagen")
+const imagenDelUsuario = document.getElementById("imagen")
 const resultadoTextoSuperior = document.getElementById("resultado-texto-superior")
 const resultadoTextoInferior = document.getElementById("resultado-texto-inferior")
 
 // Panel imagen
 const panelImagen = document.getElementById("contenedor-panel-imagen")
 const inputUrl = document.getElementById("input-url")
+const inputColorFondoImagen = document.getElementById("input-color-fondo-imagen")
+const resultadoColorFondoImagen = document.getElementById("resultado-color-imagen")
 const inputModoMezcla = document.getElementById("input-modo-mezcla")
 const botonRestablecerFiltros = document.getElementById("boton-restablecer-filtros")
+
+//Filtros
+const inputBrillo = document.getElementById("input-filtro-brillo")
+const inputOpacidad = document.getElementById("input-filtro-opacidad")
+const inputContraste = document.getElementById("input-filtro-contraste")
+const inputDesenfoque = document.getElementById("input-filtro-desenfoque")
+const inputEscalaDeGrises = document.getElementById("input-filtro-escala-de-grises")
+const inputSepia = document.getElementById("input-filtro-sepia")
+const inputHue = document.getElementById("input-filtro-hue")
+const inputSaturado = document.getElementById("input-filtro-saturado")
+const inputNegativo = document.getElementById("input-filtro-negativo")
+
+
 
 //Panel Texto
 //Parrafos
@@ -104,8 +120,43 @@ botonModoOscuro.onclick = activarModoOscuro
 // URL de imagen
 
 inputUrl.oninput = () => {
-    contenedorImagen.src = inputUrl.value 
+    imagenDelUsuario.src = inputUrl.value 
 }
+
+//Color y modo de capas
+
+inputColorFondoImagen.oninput = () => {
+    contenedorImagen.style.backgroundColor = (inputColorFondoImagen.value)
+    resultadoColorFondoImagen.textContent = inputColorFondoImagen.value
+
+}
+// inputModoMezcla.oninput = () => {
+//     if (inputModoMezcla.value = "Aclarar") {
+//         imagenDelUsuario.style.mixBlendMode = ("lighten")
+// }
+
+
+// Filtos
+// inputBrillo.oninput = () => {
+//     imagenDelUsuario.style.filter = `brightness(${inputBrillo.value})`
+// }
+
+// inputOpacidad.oninput = () => {
+//     imagenDelUsuario.style.filter = `opacity(${inputOpacidad.value})`
+// }
+
+// inputContraste.oninput = () => {
+//     imagenDelUsuario.style.filter = `contrast(${inputContraste.value})`
+// }
+
+// inputDesenfoque.oninput = () => {
+//     imagenDelUsuario.style.filter = `blur(${inputDesenfoque.value}px)`
+// }
+
+// inputEscalaDeGrises.oninput = () => {
+//     imagenDelUsuario.style.filter = `greyscale(${inputEscalaDeGrises.value})`
+// }
+
 
 // Funcionamiento Panel de texto
 
@@ -216,6 +267,3 @@ inputInterlineado.oninput = () => {
 //     resultadoTextoSuperior.style.webkitTextStroke = "2px white"
 //     resultadoTextoInferior.style.webkitTextStroke = "2px white"
 // }
- 
-
- 
