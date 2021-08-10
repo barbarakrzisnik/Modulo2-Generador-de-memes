@@ -272,6 +272,23 @@ inputColorTextoFondo.oninput = () => {
 }
 
 // Contorno
+// resultadoTextoSuperior.classList.add=("contorno-texto")
+
+inputContornoOscuro.onclick = () => {
+    resultadoTextoSuperior.style.textShadow = "black 1.5px 1px"
+    resultadoTextoInferior.style.textShadow = "black 1.5px 1px"
+}
+
+inputContornoClaro.onclick = () => {
+    resultadoTextoSuperior.style.textShadow = "white 1.5px 1px"
+    resultadoTextoInferior.style.textShadow = "white 1.5px 1px"
+}
+
+inputContornoNinguno.onclick = () => {
+    resultadoTextoSuperior.style.textShadow = "none"
+    resultadoTextoInferior.style.textShadow = "none"
+}
+
 
 // Espaciado
 
