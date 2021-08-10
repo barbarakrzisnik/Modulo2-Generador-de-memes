@@ -1,8 +1,8 @@
 /* Estilos header */
 body {
     background-color: #eeeeee;
-    font-family: 'Open Sans', sans-serif;
     color: #424242;
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -49,6 +49,7 @@ body {
     width: 20px;
     border: none;
     outline: none;
+    background-color: transparent;
 }
 
 .input-range {
@@ -120,8 +121,8 @@ main {
     line-height: 2.5;
     text-align: center;
     margin: 0;
-    -webkit-text-stroke: 1px transparent;
 }
+
 
 .contenedor-imagen {
     height: 100%;
@@ -319,5 +320,6 @@ main {
     background-color: #30353f;
     color: white;
 }
+
 
 
