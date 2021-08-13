@@ -45,6 +45,7 @@ const inputTextoInferior = document.getElementById("input-texto-inferior")
 //Posibles input
 const checkboxTextoSuperior = document.getElementById("input-checkbox-texto-superior")
 const checkboxTextoInferior = document.getElementById("input-checkbox-texto-inferior")
+const checkboxFondoTransparente = document.getElementById("input-checkbox-fondo-transparente")
 const inputTipoFuente = document.getElementById("input-fuente")
 const inputTamanioFuente = document.getElementById("input-tamanio-fuente")
 const inputAlineadoIzquierda = document.getElementById("input-alineado-izquierda")
@@ -145,12 +146,12 @@ inputColorFondoImagen.oninput = () => {
 
 //Modo mezcla
 
-inputModoMezcla.onchange = () => {
+inputModoMezcla.onchange = (event) => {
     if (inputModoMezcla === "Aclarar") {
         imagenDelUsuario.style.backgroundBlendMode = "lighten"
     }
-    else {
-        imagenDelUsuario.style.backgroundBlendMode = "none"
+    else if (inputModoMezcla === "Oscurecer") {
+        imagenDelUsuario.style.backgroundBlendMode = "darken"
     }
 }
 
@@ -225,6 +226,15 @@ checkboxTextoInferior.onchange = () => {
     }
 }
 
+checkboxFondoTransparente.onchange = () => {
+    if (checkboxFondoTransparente.checked) {
+        
+    }
+    else {
+        
+    }
+
+}
 
 //Tipo de fuente
 inputTipoFuente.oninput = () => {
