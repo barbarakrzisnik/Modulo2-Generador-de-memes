@@ -140,8 +140,8 @@ inputUrl.oninput = () => {
 //Color de fondo
 
 inputColorFondoImagen.oninput = () => {
-    contenedorImagen.style.backgroundColor = (inputColorFondoImagen.value)
-    resultadoColorFondoImagen.textContent = inputColorFondoImagen.value
+    contenedorImagen.style.backgroundColor = inputColorFondoImagen.value
+    resultadoColorFondoImagen.textContent = inputColorFondoImagen.value.toUpperCase()
 }
 
 //Modo mezcla
@@ -226,14 +226,20 @@ checkboxTextoInferior.onchange = () => {
     }
 }
 
+// resultadoTextoInferior.style.backgroundColor = "transparent"
+
+console.log(checkboxFondoTransparente)
 checkboxFondoTransparente.onchange = () => {
     if (checkboxFondoTransparente.checked) {
-        
+        resultadoTextoSuperior.style.backgroundColor = "transparent"
+        resultadoTextoInferior.style.backgroundColor = "transparent"
     }
     else {
-        
-    }
+        resultadoTextoSuperior.style.backgroundColor = inputColorTextoFondo.value
+        resultadoTextoInferior.style.backgroundColor = inputColorTextoFondo.value
+        resultadoColorFondoTexto.textContent = inputColorTextoFondo.value
 
+    }
 }
 
 //Tipo de fuente
@@ -272,13 +278,13 @@ inputAlineadoDerecha.onclick = () => {
 inputColorTexto.oninput = () => {
     resultadoTextoSuperior.style.color = inputColorTexto.value
     resultadoTextoInferior.style.color = inputColorTexto.value
-    resultadoColorTexto.textContent = inputColorTexto.value
+    resultadoColorTexto.textContent = inputColorTexto.value.toUpperCase()
 }
 
 inputColorTextoFondo.oninput = () => {
     resultadoTextoSuperior.style.backgroundColor = inputColorTextoFondo.value
     resultadoTextoInferior.style.backgroundColor = inputColorTextoFondo.value
-    resultadoColorFondoTexto.textContent = inputColorTextoFondo.value
+    resultadoColorFondoTexto.textContent = inputColorTextoFondo.value.toUpperCase()
 }
 
 // Contorno
