@@ -146,12 +146,30 @@ inputColorFondoImagen.oninput = () => {
 
 //Modo mezcla
 
-inputModoMezcla.onchange = (event) => {
-    if (inputModoMezcla === "Aclarar") {
-        imagenDelUsuario.style.backgroundBlendMode = "lighten"
+inputModoMezcla.onchange = () => {
+    if (inputModoMezcla.value === "Aclarar") {
+        imagenDelUsuario.style.mixBlendMode = "lighten"
+        imagenDelUsuario.style.backgroundColor = inputColorFondoImagen.value
     }
-    else if (inputModoMezcla === "Oscurecer") {
-        imagenDelUsuario.style.backgroundBlendMode = "darken"
+    else if (inputModoMezcla.value === "Oscurecer") {
+        imagenDelUsuario.style.mixBlendMode = "darken"
+        imagenDelUsuario.style.backgroundColor = inputColorFondoImagen.value
+    }
+    else if (inputModoMezcla.value === "Diferencia") {
+        imagenDelUsuario.style.mixBlendMode = "difference"
+        imagenDelUsuario.style.backgroundColor = inputColorFondoImagen.value
+    }
+    else if (inputModoMezcla.value === "Luminosidad") {
+        imagenDelUsuario.style.mixBlendMode = "luminosity"
+        imagenDelUsuario.style.backgroundColor = inputColorFondoImagen.value
+    }
+    else if (inputModoMezcla.value === "Multiplicar") {
+        imagenDelUsuario.style.mixBlendMode = "multiply"
+        imagenDelUsuario.style.backgroundColor = inputColorFondoImagen.value
+    }
+    else if (inputModoMezcla.value === "Ninguno") {
+        imagenDelUsuario.style.mixBlendMode = "normal"
+        imagenDelUsuario.style.backgroundColor = inputColorFondoImagen.value
     }
 }
 
