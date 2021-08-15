@@ -30,6 +30,7 @@ body {
     background-color: rgb(158, 158, 158);
 }
 
+
 /* Estilos Input */
 
 .input-select {
@@ -92,6 +93,11 @@ main {
     width: 100%;
 }
 
+.paneles-icono-cerrar {
+    margin: 0;
+    text-align: end;
+    display: none;
+}
 
 /* Estilos canvas */
 
@@ -136,6 +142,7 @@ main {
 }
 
 
+
 .boton-descargar-imagen {
     background-color: #2b5f3c;
     color: white;
@@ -153,7 +160,8 @@ main {
 
 .contenedor-panel-imagen {
     width: 250px;
-    height: 100vh;
+    height: 100%;
+    overflow: scroll;
     padding: 10px 30px;
     background-color: #fafafa;
     display: flex;
@@ -216,7 +224,6 @@ main {
 
 .contenedor-panel-texto {
     width: 250px;
-    height: 100vh;
     overflow: scroll;
     padding: 10px 30px;
     background-color: #fafafa;
@@ -319,6 +326,3 @@ main {
     background-color: #30353f;
     color: white;
 }
-
-
-

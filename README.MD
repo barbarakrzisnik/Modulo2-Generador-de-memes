@@ -1,6 +1,6 @@
 # GENERADOR DE MEMES
 
-<img src="./img/Asset 6.png">  
+<img src="./img/Asset 4.png">  
   
 
 Hola! Este es mi primer proyecto realizado con Javascript. 💻
@@ -10,5 +10,11 @@ ___
 
 ### Para ver mi proyecto ingrese [aquí](https://barbarakrzisnik.github.io/Modulo2-Generador-de-memes/)  
 
+___
+
+👩‍💻 Este proyecto fue construido con las siguientes tecnologías:  
+
+<img src="./img/Asset 1.png"> <img src="./img/Asset 2.png">  <img src="./img/Asset 3.png">   
+
   
-<img src="./img/Asset 5.png">
+<img src="./img/Asset 7.png">

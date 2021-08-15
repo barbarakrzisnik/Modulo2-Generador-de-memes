@@ -42,6 +42,7 @@ const inputNegativo = document.getElementById("input-filtro-negativo")
 const inputTextoSuperior = document.getElementById("input-texto-superior")
 const inputTextoInferior = document.getElementById("input-texto-inferior")
 
+
 //Posibles input
 const checkboxTextoSuperior = document.getElementById("input-checkbox-texto-superior")
 const checkboxTextoInferior = document.getElementById("input-checkbox-texto-inferior")
