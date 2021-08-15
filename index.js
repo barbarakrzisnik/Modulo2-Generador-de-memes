@@ -245,9 +245,6 @@ checkboxTextoInferior.onchange = () => {
     }
 }
 
-// resultadoTextoInferior.style.backgroundColor = "transparent"
-
-console.log(checkboxFondoTransparente)
 checkboxFondoTransparente.onchange = () => {
     if (checkboxFondoTransparente.checked) {
         resultadoTextoSuperior.style.backgroundColor = "transparent"

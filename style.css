@@ -4,8 +4,6 @@ body {
     color: #424242;
     font-family: 'Open Sans', sans-serif;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     display: flex;
     width: 100%;
 }
@@ -53,9 +51,16 @@ body {
     background-color: transparent;
 }
 
+.input-color::-webkit-color-swatch-wrapper {
+    padding: 0; 
+}
+
+.input-color::-webkit-color-swatch {
+    border: none;
+    border-radius: 100%;
+}
+
 .input-range {
-    background-color: #e0e0e0;
-    color: white;
     width: 100%;
     border-radius: 10px;
     height: 5px;
@@ -69,14 +74,6 @@ body {
     width: 100%;
 }
 
-.input-color::-webkit-color-swatch-wrapper {
-    padding: 0; 
-}
-
-.input-color::-webkit-color-swatch {
-    border: none;
-    border-radius: 100%;
-}
 
 /* Estilos en general */
 
@@ -99,7 +96,7 @@ main {
     display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .paneles-icono-cerrar {
         display: block;
     }
@@ -145,14 +142,12 @@ main {
     height: 100%;
     overflow: hidden;
     display: flex;
-    justify-content: center;
 }
 
 .imagen {
+    width: 100%;
     overflow: hidden;
 }
-
-
 
 .boton-descargar-imagen {
     background-color: #2b5f3c;
@@ -167,7 +162,7 @@ main {
     background-color: #3a8152;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .contenedor-meme {
         width: 300px;
         height: 300px;
@@ -237,7 +232,7 @@ main {
     background-color: rgb(158, 158, 158);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .contenedor-panel-imagen {
         display: none;
         position: absolute;
@@ -279,11 +274,7 @@ main {
     flex-direction: column;
 }
 
-#resultado-color-texto {
-    margin: 0;
-}
-
-#resultado-color-fondo-texto {
+#resultado-color-texto, #resultado-color-fondo-texto {
     margin: 0;
 }
 
@@ -332,7 +323,7 @@ main {
     height: 30px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .contenedor-panel-texto {
         display: none;
         position: absolute;

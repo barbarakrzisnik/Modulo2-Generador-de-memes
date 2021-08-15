@@ -9,36 +9,49 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="icon" href="./favicon.ico" type="image/ico" >
+    <link rel="icon" href="./favicon.ico" type="image/ico">
     <script src="https://kit.fontawesome.com/096a878366.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+        integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+        integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+        crossorigin="anonymous"></script>
     <title>Generador de memes</title>
 </head>
 
 <body>
     <main>
+<!-- ///////////////// HEADER ////////////////// -->
         <header class="header">
             <h1>Generador de memes</h1>
             <div class="contenedor-botones-header">
-                <button class="boton-nav" id="nav-boton-imagen" aria-label="Panel Imagen"><i class="far fa-file-image"></i> Imagen</button>
-                <button class="boton-nav" id="nav-boton-texto" aria-label="Panel Texto"><i class="fas fa-font"></i> Texto</button>
-                <button class="boton-nav" id="nav-boton-modo-oscuro" aria-label="Modo oscuro"><i class="far fa-lightbulb"></i> Modo Oscuro</button>
+                <button class="boton-nav" id="nav-boton-imagen" aria-label="Panel Imagen"><i
+                        class="far fa-file-image"></i> Imagen</button>
+                <button class="boton-nav" id="nav-boton-texto" aria-label="Panel Texto"><i class="fas fa-font"></i>
+                    Texto</button>
+                <button class="boton-nav" id="nav-boton-modo-oscuro" aria-label="Modo oscuro"><i
+                        class="far fa-lightbulb"></i> Modo Oscuro</button>
             </div>
         </header>
+<!-- ///////////////// CANVAS ////////////////// -->
         <div class="contenedor-canvas" id="contenedor-canvas">
             <div class="contenedor-meme">
                 <p class="texto-superior" id="resultado-texto-superior">Top text</p>
-                <div class="contenedor-imagen" id="contenedor-imagen"><img src="" class="imagen" id="imagen" alt="Imagen ingresada por usuario"></div>
+                <div class="contenedor-imagen" id="contenedor-imagen"><img src="" class="imagen" id="imagen"
+                        alt="Imagen ingresada por usuario"></div>
                 <p class="texto-inferior" id="resultado-texto-inferior">Bottom text</p>
             </div>
-            <div><button class="boton-descargar-imagen" id="boton-descargar-imagen" aria-label="Descargar Meme"><i class="fas fa-download"></i>
+            <div><button class="boton-descargar-imagen" id="boton-descargar-imagen" aria-label="Descargar Meme"><i
+                        class="fas fa-download"></i>
                     Descargar imagen</button></div>
         </div>
     </main>
     <aside>
+<!-- ///////////////// PANEL DE IMAGEN ////////////////// -->
         <section class="contenedor-panel-imagen" id="contenedor-panel-imagen">
-            <p class="paneles-icono-cerrar" id="panel-imagen-icono-cerrar" aria-label="Cerrar Panel Imagen"><i class="fas fa-times"></i></p>
+            <p class="paneles-icono-cerrar" id="panel-imagen-icono-cerrar" aria-label="Cerrar Panel Imagen"><i
+                    class="fas fa-times"></i></p>
             <h2>IMAGEN</h2>
 
             <div class="panel-imagen-contenedor-url">
@@ -48,18 +61,20 @@
             <h3><label for="input-color-fondo-imagen"></label>FONDO</h3>
             <div class="panel-imagen-contenedor-fondo">
                 <div class="panel-imagen-contenedor-fondo-color">
-                    <input type="color" class="input-color" id="input-color-fondo-imagen"><span><p id="resultado-color-imagen">#000000</p></span>
+                    <input type="color" class="input-color" id="input-color-fondo-imagen"><span>
+                        <p id="resultado-color-imagen">#000000</p>
+                    </span>
                 </div>
                 <div class="panel-imagen-contenedor-fondo-mezcla">
-                   <label><select name="modo-mezcla" id="input-modo-mezcla" class="input-modo-mezcla input-select">
-                        <option value="Ninguno">Ninguno</option>
-                        <option value="Aclarar">Aclarar</option>
-                        <option value="Oscurecer">Oscurecer</option>
-                        <option value="Diferencia">Diferencia</option>
-                        <option value="Luminosidad">Luminosidad</option>
-                        <option value="Multiplicar">Multiplicar</option>
-                    </select>
-                </label>
+                    <label><select name="modo-mezcla" id="input-modo-mezcla" class="input-modo-mezcla input-select">
+                            <option value="Ninguno">Ninguno</option>
+                            <option value="Aclarar">Aclarar</option>
+                            <option value="Oscurecer">Oscurecer</option>
+                            <option value="Diferencia">Diferencia</option>
+                            <option value="Luminosidad">Luminosidad</option>
+                            <option value="Multiplicar">Multiplicar</option>
+                        </select>
+                    </label>
                 </div>
             </div>
 
@@ -67,36 +82,47 @@
                 <div class="panel-imagen-contenedor-filtros">
                     <h3>FILTROS</h3>
                     <label class="label-filtros" for="input-filtro-brillo">BRILLOS</label>
-                    <input class="input-range" id="input-filtro-brillo" type="range" min="0" max="1" step="0.1" value="1">
+                    <input class="input-range" id="input-filtro-brillo" type="range" min="0" max="1" step="0.1"
+                        value="1">
 
                     <label class="label-filtros" for="input-filtro-opacidad">OPACIDAD</label>
-                    <input class="input-range" id="input-filtro-opacidad" type="range" min="0" max="1" step="0.1" value="1">
+                    <input class="input-range" id="input-filtro-opacidad" type="range" min="0" max="1" step="0.1"
+                        value="1">
 
                     <label class="label-filtros" for="input-filtro-contraste">CONTRASTE</label>
-                    <input class="input-range" id="input-filtro-contraste" type="range" min="100" max="1000" step="1" value="100">
+                    <input class="input-range" id="input-filtro-contraste" type="range" min="100" max="1000" step="1"
+                        value="100">
 
                     <label class="label-filtros" for="input-filtro-desenfoque">DESENFOQUE</label>
-                    <input class="input-range" id="input-filtro-desenfoque" type="range" min="0" max="10" step="0.1" value="0">
+                    <input class="input-range" id="input-filtro-desenfoque" type="range" min="0" max="10" step="0.1"
+                        value="0">
 
                     <label class="label-filtros" for="input-filtro-escala-de-grises">ESCALA DE GRISES</label>
-                    <input class="input-range" id="input-filtro-escala-de-grises" type="range" min="0" max="100" step="01" value="0">
+                    <input class="input-range" id="input-filtro-escala-de-grises" type="range" min="0" max="100"
+                        step="01" value="0">
 
                     <label class="label-filtros" for="input-filtro-sepia">SEPIA</label>
-                    <input class="input-range" id="input-filtro-sepia" type="range" min="0" max="100" step="1" value="0">
+                    <input class="input-range" id="input-filtro-sepia" type="range" min="0" max="100" step="1"
+                        value="0">
 
                     <label class="label-filtros" for="input-filtro-hue">HUE</label>
                     <input class="input-range" id="input-filtro-hue" type="range" min="0" max="359" step="1" value="0">
 
                     <label class="label-filtros" for="input-filtro-saturado">SATURADO</label>
-                    <input class="input-range" id="input-filtro-saturado" type="range" min="100" max="1000" step="10" value="100">
+                    <input class="input-range" id="input-filtro-saturado" type="range" min="100" max="1000" step="10"
+                        value="100">
 
                     <label class="label-filtros" for="input-filtro-negativo">NEGATIVO</label>
-                    <input class="input-range" id="input-filtro-negativo" type="range" min="0" max="1" step="0.1" value="0">
+                    <input class="input-range" id="input-filtro-negativo" type="range" min="0" max="1" step="0.1"
+                        value="0">
                 </div>
                 <button id="boton-restablecer-filtros" class="boton-restablecer-filtros">Restablecer filtros</button>
         </section>
-        <section class="contenedor-panel-texto ocultar-panel" id="contenedor-panel-texto"> 
-            <p class="paneles-icono-cerrar" id="panel-texto-icono-cerrar" aria-label="Cerrar Panel Texto"><i class="fas fa-times"></i></p>
+<!-- ///////////////// PANEL DE TEXTO ////////////////// -->
+        <section class="contenedor-panel-texto ocultar-panel" id="contenedor-panel-texto">
+
+            <p class="paneles-icono-cerrar" id="panel-texto-icono-cerrar" aria-label="Cerrar Panel Texto"><i
+                    class="fas fa-times"></i></p>
             <h2>TEXTO</h2>
 
             <div class="panel-texto-superior-inferior">
@@ -124,8 +150,8 @@
                     <option value="Times New Roman">Times New Roman</option>
                 </select>
                 <div>
-                    <label><input class="input-tamanio-fuente input-number" id="input-tamanio-fuente" type="number" max="90"
-                        min="12"></label>
+                    <label><input class="input-tamanio-fuente input-number" id="input-tamanio-fuente" type="number"
+                            max="90" min="12"></label>
                     <button class="botones-panel-texto" id="input-alineado-izquierda" aria-label="Alinear izquierda"><i
                             class="fas fa-align-left"></i></button>
                     <button class="botones-panel-texto" id="input-alineado-centro" aria-label="Alinear centro"><i
@@ -140,7 +166,9 @@
                     <h3><label for="input-color-texto">COLOR</label></h3>
                     <div class="panel-texto-color-contenedor">
                         <input type="color" class="input-color" id="input-color-texto">
-                        <span><p id="resultado-color-texto">#000000</p></span>
+                        <span>
+                            <p id="resultado-color-texto">#000000</p>
+                        </span>
                     </div>
                 </div>
 
@@ -148,19 +176,24 @@
                     <h3><label for="input-color-texto-fondo">FONDO</label></h3>
                     <div class="panel-texto-color-contenedor panel-texto-color-contenedor-fondo">
                         <input type="color" class="input-color" id="input-color-texto-fondo">
-                        <span><p id="resultado-color-fondo-texto">#FFFFFF</p></span>
+                        <span>
+                            <p id="resultado-color-fondo-texto">#FFFFFF</p>
+                        </span>
                     </div>
                 </div>
             </div>
-            <label class="label-input-texto"><input type="checkbox" id="input-checkbox-fondo-transparente">Fondo transparente</label>
+            <label class="label-input-texto"><input type="checkbox" id="input-checkbox-fondo-transparente">Fondo
+                transparente</label>
 
 
             <div class="panel-texto-contorno-espaciado-interlineado">
                 <h3>CONTORNO</h3>
-                <button class="botones-panel-texto" id="input-contorno-ninguno" aria-label="Sin contorno">Ninguno</button>
+                <button class="botones-panel-texto" id="input-contorno-ninguno"
+                    aria-label="Sin contorno">Ninguno</button>
                 <button class="botones-panel-texto" id="input-contorno-claro" aria-label="Contorno claro">Claro</button>
-                <button class="botones-panel-texto" id="input-contorno-oscuro" aria-label="Contorno oscuro">Oscuro</button>
-        
+                <button class="botones-panel-texto" id="input-contorno-oscuro"
+                    aria-label="Contorno oscuro">Oscuro</button>
+
                 <h3><label for="input-espaciado">ESPACIADO</label></h3>
                 <input class="input-number input-espaciado" id="input-espaciado" type="number" max="50" min="10">
 
