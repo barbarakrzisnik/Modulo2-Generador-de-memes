@@ -241,9 +241,7 @@ main {
     .contenedor-panel-imagen {
         display: none;
         position: absolute;
-        left: 0;
-
-        
+        left: 0; 
     }
 }
 
