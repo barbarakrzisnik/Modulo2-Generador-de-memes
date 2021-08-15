@@ -99,6 +99,17 @@ main {
     display: none;
 }
 
+@media screen and (max-width: 600px) {
+    .paneles-icono-cerrar {
+        display: block;
+    }
+
+    h1 {
+        text-align: center;
+    }
+}
+
+
 /* Estilos canvas */
 
 
@@ -154,6 +165,13 @@ main {
 
 .boton-descargar-imagen:hover {
     background-color: #3a8152;
+}
+
+@media screen and (max-width: 600px) {
+    .contenedor-meme {
+        width: 300px;
+        height: 300px;
+    }
 }
 
 /* Estilos panel imagen */
@@ -217,6 +235,16 @@ main {
 
 .boton-restablecer-filtros:hover {
     background-color: rgb(158, 158, 158);
+}
+
+@media screen and (max-width: 600px) {
+    .contenedor-panel-imagen {
+        display: none;
+        position: absolute;
+        left: 0;
+
+        
+    }
 }
 
 
@@ -306,12 +334,16 @@ main {
     height: 30px;
 }
 
-
-/* Clases para JS */
-.ocultar-panel {
-    display: none;
+@media screen and (max-width: 600px) {
+    .contenedor-panel-texto {
+        display: none;
+        position: absolute;
+        left: 0;
+    }
 }
 
+
+/* Clases para JS */
 .modo-oscuro-gris-oscuro {
     background-color: #191f2b;
     color: white;

@@ -22,6 +22,7 @@ const inputColorFondoImagen = document.getElementById("input-color-fondo-imagen"
 const resultadoColorFondoImagen = document.getElementById("resultado-color-imagen")
 const inputModoMezcla = document.getElementById("input-modo-mezcla")
 const botonRestablecerFiltros = document.getElementById("boton-restablecer-filtros")
+const botonCerrarPanelImagen = document.getElementById("panel-imagen-icono-cerrar")
 
 //Filtros
 const inputBrillo = document.getElementById("input-filtro-brillo")
@@ -41,6 +42,7 @@ const inputNegativo = document.getElementById("input-filtro-negativo")
 //Parrafos
 const inputTextoSuperior = document.getElementById("input-texto-superior")
 const inputTextoInferior = document.getElementById("input-texto-inferior")
+const botonCerrarPanelTexto = document.getElementById("panel-texto-icono-cerrar")
 
 
 //Posibles input
@@ -75,20 +77,18 @@ const contenedorColorFondoTexto = document.querySelector(".panel-texto-color-con
 ///////////////// FUNCIONAMIENTO 
 
 
-// Funcionamiento boton Imagen
-const mostrarPanelImagen = () => {
-    panelImagen.classList.remove("ocultar-panel")
-    panelTexto.classList.add("ocultar-panel")
-  }
-botonImagen.onclick = mostrarPanelImagen
+// Funcionamiento boton Imagen y boton Texto
 
+botonImagen.onclick = () => {
+    panelImagen.style.display = "block"
+    panelTexto.style.display = "none"
+}
 
-// // Funcionamiento boton Texto
-const mostrarPanelTexto = () => {
-    panelImagen.classList.add("ocultar-panel")
-    panelTexto.classList.remove("ocultar-panel")
-  }
-botonTexto.onclick = mostrarPanelTexto
+botonTexto.onclick = () => {
+    panelImagen.style.display = "none"
+    panelTexto.style.display = "block"
+}
+
 
 
 //Funcionamiento boton Modo Oscuro
@@ -346,7 +346,13 @@ inputInterlineado.oninput = () => {
 ///////////////// RESPONSIVE
 
 
+botonCerrarPanelImagen.onclick = () => {
+    panelImagen.style.display = "none"
+}
 
+botonCerrarPanelTexto.onclick = () => {
+    panelTexto.style.display = "none"
+}
 
 
 
