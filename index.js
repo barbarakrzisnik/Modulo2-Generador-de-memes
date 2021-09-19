@@ -93,6 +93,14 @@ botonTexto.onclick = () => {
 
 //Funcionamiento boton Modo Oscuro
 botonModoOscuro.onclick = () => {
+    // No está mal como resolviste esta funcion, pero habria sido más claro como lo comenté en clase
+    // Al darle una clase al body, como aquí le das modo-oscuro-gris-claro, podríamos hacer en CSS
+    // que todos los elementos que son hijos de body tengan un estilo (eso ya pasa por defecto)
+    // y agregar que todos los elementos que son hijos de body.modo-oscuro-gris-claro tengan otro
+    // de esa manera no necesitas aqui cambiar una a una las clases, algo que seria muy dificil
+    // de escalar si por ejemplo te piden agregar cinco o seis secciones mas y que todas tengan 
+    // modo oscuro.
+    // si no entendés bien como hacer esto no dejes de escribirme!
     body.classList.toggle("modo-oscuro-gris-claro")
     header.classList.toggle("modo-oscuro-gris-oscuro")
     panelTexto.classList.toggle("modo-oscuro-gris-medio")
@@ -121,6 +129,7 @@ botonModoOscuro.onclick = () => {
     inputInterlineado.classList.toggle("modo-oscuro-gris-claro")
 }
 
+// no funciona por culpa de la libreria, tu codigo esta bien 
 //Funcionamiento boton de descarga / NO FUNCIONA
 
 botonDescargarImagen.onclick = () => {
@@ -148,6 +157,23 @@ inputColorFondoImagen.oninput = () => {
 //Modo mezcla
 
 inputModoMezcla.onchange = () => {
+      // Esta funcion podria ser muchisimo mas breve si usaras el potencial del value del select. 
+  // en el HTML, modificamos el select para que el value sea exactamente lo que necesitas:
+
+  // <option value="normal">Ninguno</option>
+  // <option value="lighten">Aclarar</option>
+  // <option value="darken">Oscurecer</option>
+  // <option value="difference">Diferencia</option>
+  // <option value="luminosity">Luminosidad</option>
+  // <option value="multiply">Multiplicar</option>
+  // Y luego la funcion pasa a ser super breve:
+
+//   inputModoMezcla.onchange = () => {
+  //   imagenDelUsuario.style = inputModoMezcla.value
+  //   imagenDelUsuario.style.backgroundColor = inputColorFondoImagen.value
+  // }
+
+
     if (inputModoMezcla.value === "Aclarar") {
         imagenDelUsuario.style.mixBlendMode = "lighten"
         imagenDelUsuario.style.backgroundColor = inputColorFondoImagen.value
@@ -186,6 +212,15 @@ const agregarFiltros = () => {
     const sepia = inputSepia.value
     const saturate = inputSaturado.value
     const invert = inputNegativo.value
+    // Cuando sea muy largo tu JS, deja un salto de linea asi el lector no tiene que hacer 
+    // scroll horizontal
+    // imagenDelUsuario.style.filter = `
+    //     brightness(${brightness}) opacity(${opacity})
+    //     blur(${blur}px) contrast(${contrast}%) 
+    //     grayscale(${grayscale}%) hue-rotate(${hue}deg) 
+    //     sepia(${sepia}%) saturate(${saturate}%) 
+    //     invert(${invert})
+    //     `
     imagenDelUsuario.style.filter = `brightness(${brightness}) opacity(${opacity}) blur(${blur}px) contrast(${contrast}%) grayscale(${grayscale}%) hue-rotate(${hue}deg) sepia(${sepia}%) saturate(${saturate}%) invert(${invert})`
 }
 
@@ -246,6 +281,12 @@ checkboxTextoInferior.onchange = () => {
 }
 
 checkboxFondoTransparente.onchange = () => {
+    // Esta orden se cumple, el div se pone de fondo transparente... 
+    // entonces se ve lo que esta debajo
+    // lo que esta debajo es el div "contenedor-meme" que tiene color negro
+    // y asi termina viendose negro el bloque cuando hacemos click en el 
+    // checkbox. Lo que deberia verse es la imagen. 
+    // Agregale ademas del fondo transparente un "position: absolute" y deberia mejorar
     if (checkboxFondoTransparente.checked) {
         resultadoTextoSuperior.style.backgroundColor = "transparent"
         resultadoTextoInferior.style.backgroundColor = "transparent"
@@ -273,6 +314,21 @@ inputTamanioFuente.oninput = () => {
 }
 
 //Alineacion de texto
+// Podrias aprovechar para hacer una funcion reutilizable aqui:
+// const setTextAlignment = (alignment) => {
+//     topTextInMemebox.style.textAlign = alignment
+//     bottomTextInMemebox.style.textAlign = alignment
+// }
+// Y despues llamar a la funcion en el onclick: 
+// inputAlineadoIzquierda.onclick = () => {
+//     setTextAlignment("center")
+// }
+// inputAlineadoCentro.onclick = () => {
+//     setTextAlignment("left")
+// }
+// inputAlineadoDerecha.onclick = () => {
+//     setTextAlignment("right")
+// }
 
 inputAlineadoIzquierda.onclick = () => {
     resultadoTextoSuperior.style.textAlign = "left"
